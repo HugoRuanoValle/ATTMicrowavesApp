@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW Special events import" max_length="40" name="x_attme_microwaves_mw_special_events_import" type="collection">
+        <element attributes="import_attribute_name=Fecha fin" label="Fecha fin" max_length="40" name="u_fecha_fin" type="glide_date"/>
+        <element attributes="import_attribute_name=Fecha inicio" label="Fecha inicio" max_length="40" name="u_fecha_inicio" type="glide_date"/>
+        <element attributes="import_attribute_name=Nombre,edge_encryption_enabled=true" label="Nombre " max_length="40" name="u_nombre" type="string"/>
+    </element>
+</database>

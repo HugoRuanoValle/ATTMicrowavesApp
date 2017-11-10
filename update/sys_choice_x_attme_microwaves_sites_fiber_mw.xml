@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="fiber_mw" table="x_attme_microwaves_sites" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ERROR:#N/A</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aad863aadbd1870028f3d5ab5e9619b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:30</sys_updated_on>
+            <value>ERROR:#N/A</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fiber</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 19:50:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87f11881dbbff20028f3d5ab5e961970</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 19:50:39</sys_updated_on>
+            <value>Fiber</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FO</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b2d863aadbd1870028f3d5ab5e9619ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:30</sys_updated_on>
+            <value>FO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>NA</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-07-21 17:07:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3ebf43d6db080f00e7bbdbbb5e96197d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 21:11:05</sys_updated_on>
+            <value>NA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>undefined</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-09-17 00:14:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b314967cdbd9c300e7bbdbbb5e96190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-09-17 00:14:55</sys_updated_on>
+            <value>undefined</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>fiber_mw</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mw</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>1</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 19:50:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ff11881dbbff20028f3d5ab5e961970</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 19:50:39</sys_updated_on>
+            <value>Mw</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>fiber_mw</element>
+            <name>x_attme_microwaves_sites</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 19:50:39</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>4bf11881dbbff20028f3d5ab5e961970</sys_id>
+            <sys_mod_count>10</sys_mod_count>
+            <sys_name>fiber_mw</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_sites_fiber_mw</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-10 00:00:03</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

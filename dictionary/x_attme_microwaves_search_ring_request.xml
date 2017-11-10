@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Search ring request" max_length="40" name="x_attme_microwaves_search_ring_request" sizeclass="5" text_index="true" type="collection">
+        <element label="All sites feasible" max_length="40" name="all_sites_feasible" type="boolean"/>
+        <element choice="1" label="Solution type" max_length="40" name="solution_type" type="choice">
+            <choice>
+                <element label="COW" sequence="0" value="COW"/>
+                <element label="COLT" sequence="1" value="COLT"/>
+            </choice>
+        </element>
+        <element label="Special event" max_length="32" name="special_event" reference="x_attme_microwaves_planned_special_events" type="reference"/>
+        <element choice="1" label="Subtype" mandatory="true" max_length="40" name="subtype" read_only="true" type="choice">
+            <choice>
+                <element label="New site(s)" sequence="100" value="New site(s)"/>
+                <element label="Special event(s)" sequence="200" value="Special event(s)"/>
+            </choice>
+        </element>
+        <element label="Total feasible sites" max_length="40" name="total_feasible_sites" type="integer"/>
+        <element label="Total sites to analyze" max_length="40" name="total_sites_to_analyze" type="integer"/>
+        <element label="Total unfeasible sites" max_length="40" name="total_unfeasible_sites" type="integer"/>
+    </element>
+</database>

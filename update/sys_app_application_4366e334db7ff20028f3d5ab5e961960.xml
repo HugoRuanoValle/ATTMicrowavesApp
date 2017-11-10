@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description>Microwaves area scoped app</description>
+        <device_type>browser</device_type>
+        <hint>Microwaves area scoped app</hint>
+        <name>Microwaves</name>
+        <order>100</order>
+        <roles>snc_internal</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-04 16:40:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4366e334db7ff20028f3d5ab5e961960</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Microwaves</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_app_application_4366e334db7ff20028f3d5ab5e961960</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-23 18:18:16</sys_updated_on>
+        <title>Microwaves</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

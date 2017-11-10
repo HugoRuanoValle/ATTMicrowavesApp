@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="MW Sites import (FX info)">d4448dffdb00cb0028f3d5ab5e96195b</map>
+        <order>200</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+//con este transform script omitiremos la actualización de sitios si la solicitud de aro de busqueda para la cual se carga el archivo no es la misma que la registrada en los sitios.
+	
+	var loading_parent_request = gs.getProperty('x_attme_microwaves.SitesParentRequestID');
+	var site_id;
+	var site_name;
+	
+	var source_name = source.u_site_name;
+	var source_name_numbers = source_name.substring(6, 10);
+	var invalid_number = isNaN(source_name_numbers);
+	
+//si contiene espacios y además en entre sus caracteres 6 y 10 no hay un número válido entonces es un site name
+	if(source_name.indexOf(" ") >-1 && invalid_number == true) 
+	{
+		site_name = source_name;
+		site_id = 'Not defined';
+	}
+	
+//si no contiene espacios y entre sus caracteres 6 y 10 hay un número valido entonces es un site ID
+	if(source_name.indexOf(" ") == -1 && invalid_number == false)
+	{
+		site_id = source_name;
+		site_name =	'Not defined';
+	}
+
+//revisamos que el registro de sitio corresponda a la misma solicitud
+	var site = new GlideRecord('x_attme_microwaves_sites');
+	site.addQuery('site_id', site_id);
+	site.addQuery('name', site_name);
+	site.query();
+	site.next();
+	
+	//si el SRR en el registro de sitio es diferente al id de la solicitud donde se carga el archivo se debe omitir el registro del EXCEL, en esta validación no se considera cuando el sitio no existen previamente, por ello se revisa la condición getRowCount > 0
+	if(site.getRowCount() > 0 && site.search_ring_request != loading_parent_request)
+	{
+		ignore = true;
+	}
+	
+	
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-05 19:14:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6e997cdfdb1cc30028f3d5ab5e96193d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_transform_script_6e997cdfdb1cc30028f3d5ab5e96193d</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-05 21:58:00</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

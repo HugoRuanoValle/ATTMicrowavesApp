@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type" table="x_attme_microwaves_sites" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BTS</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-31 18:06:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>66666eabdb78c300e7bbdbbb5e9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-31 18:06:45</sys_updated_on>
+            <value>BTS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Collo</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b6d863aadbd1870028f3d5ab5e9619b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:30</sys_updated_on>
+            <value>Collo</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ERROR:#N/A</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43d863aadbd1870028f3d5ab5e9619dc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:32</sys_updated_on>
+            <value>ERROR:#N/A</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FRIENDLY SITE</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5bd863aadbd1870028f3d5ab5e9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:33</sys_updated_on>
+            <value>FRIENDLY SITE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Greenfield</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d0362834dbdc0300e7bbdbbb5e961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:11:51</sys_updated_on>
+            <value>Greenfield</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GREENFIELD (1 CAND.)</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c9e8a3aadbd1870028f3d5ab5e96196c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:40</sys_updated_on>
+            <value>GREENFIELD (1 CAND.)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GREENFIELD (2 CAND.)</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>47d863aadbd1870028f3d5ab5e9619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:31</sys_updated_on>
+            <value>GREENFIELD (2 CAND.)</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MW</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30e8a3aadbd1870028f3d5ab5e961952</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:38</sys_updated_on>
+            <value>MW</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OVERLAY</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cae8a3aadbd1870028f3d5ab5e9619a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:44</sys_updated_on>
+            <value>OVERLAY</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PROYECTO 2017 YA CONTRATADO</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2fd863aadbd1870028f3d5ab5e9619f0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:33</sys_updated_on>
+            <value>PROYECTO 2017 YA CONTRATADO</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>REACTIVAR</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fed863aadbd1870028f3d5ab5e9619c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:31</sys_updated_on>
+            <value>REACTIVAR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>RENT FOR EQUIPMENT</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-22 16:54:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58e8a3aadbd1870028f3d5ab5e961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-22 16:54:36</sys_updated_on>
+            <value>RENT FOR EQUIPMENT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>undefined</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-07-28 23:45:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>40fd20f4db50430028f3d5ab5e961910</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:45:42</sys_updated_on>
+            <value>undefined</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Co-Location</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>1</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d8362834dbdc0300e7bbdbbb5e961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:11:51</sys_updated_on>
+            <value>Co-Location</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>COLT</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>2</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>10362834dbdc0300e7bbdbbb5e961998</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:11:51</sys_updated_on>
+            <value>COLT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>COW</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>3</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>54362834dbdc0300e7bbdbbb5e961998</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:11:51</sys_updated_on>
+            <value>COW</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Movil</label>
+            <language>en</language>
+            <name>x_attme_microwaves_sites</name>
+            <sequence>4</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>98362834dbdc0300e7bbdbbb5e961998</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-28 23:11:51</sys_updated_on>
+            <value>Movil</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <name>x_attme_microwaves_sites</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-28 23:11:51</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d4362834dbdc0300e7bbdbbb5e961997</sys_id>
+            <sys_mod_count>14</sys_mod_count>
+            <sys_name>type</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_sites_type</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-10 00:00:32</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

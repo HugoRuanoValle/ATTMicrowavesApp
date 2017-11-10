@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW Sites update on SAC documentation" max_length="40" name="x_attme_microwaves_mw_sites_update_on_sac_documentation" type="collection">
+        <element attributes="import_attribute_name=AZIMUTH PB,edge_encryption_enabled=true" label="AZIMUTH PB" max_length="40" name="u_azimuth_pb" type="string"/>
+        <element attributes="import_attribute_name=Azimuth [°]" label="Azimuth [°]" max_length="15" name="u_azimuth____" type="decimal"/>
+        <element attributes="import_attribute_name=Band (GHz)" label="Band (GHz)" max_length="40" name="u_band__ghz_" type="integer"/>
+        <element attributes="import_attribute_name=CANDIDATE,edge_encryption_enabled=true" label="CANDIDATE" max_length="40" name="u_candidate" type="string"/>
+        <element attributes="import_attribute_name=COMMENTS,edge_encryption_enabled=true" label="COMMENTS" max_length="40" name="u_comments" type="string"/>
+        <element attributes="import_attribute_name=Dish diameter" label="Dish diameter" max_length="15" name="u_dish_diameter" type="decimal"/>
+        <element attributes="import_attribute_name=FRANJA" label="FRANJA" max_length="40" name="u_franja" type="integer"/>
+        <element attributes="import_attribute_name=Height [m] ASNP" label="Height [m] ASNP" max_length="40" name="u_height__m__asnp" type="integer"/>
+        <element attributes="import_attribute_name=LATITUD" label="LATITUD" max_length="40" name="u_latitud" type="float"/>
+        <element attributes="import_attribute_name=LONGITUD" label="LONGITUD" max_length="40" name="u_longitud" type="float"/>
+        <element attributes="import_attribute_name=PROVEEDOR,edge_encryption_enabled=true" label="PROVEEDOR" max_length="40" name="u_proveedor" type="string"/>
+        <element attributes="import_attribute_name=PROYECTO,edge_encryption_enabled=true" label="PROYECTO" max_length="40" name="u_proyecto" type="string"/>
+        <element attributes="import_attribute_name=Remote Height [m] ASNP" label="Remote Height [m] ASNP" max_length="40" name="u_remote_height__m__asnp" type="integer"/>
+        <element attributes="import_attribute_name=Remote Link,edge_encryption_enabled=true" label="Remote Link" max_length="40" name="u_remote_link" type="string"/>
+        <element attributes="import_attribute_name=SITE ID,edge_encryption_enabled=true" label="SITE ID" max_length="40" name="u_site_id" type="string"/>
+        <element attributes="import_attribute_name=SITE NAME,edge_encryption_enabled=true" label="SITE NAME" max_length="40" name="u_site_name" type="string"/>
+        <element attributes="import_attribute_name=Space diversity [Yes/No],edge_encryption_enabled=true" label="Space diversity [Yes/No]" max_length="40" name="u_space_diversity__yes_no_" type="string"/>
+        <element attributes="import_attribute_name=STATUS LOS,edge_encryption_enabled=true" label="STATUS LOS" max_length="40" name="u_status_los" type="string"/>
+        <element attributes="import_attribute_name=TYPE,edge_encryption_enabled=true" label="TYPE" max_length="40" name="u_type" type="string"/>
+    </element>
+</database>

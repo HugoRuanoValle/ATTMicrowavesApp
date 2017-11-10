@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="MW Sites update on CVP import">84cecb44db94030028f3d5ab5e9619bb</map>
+        <order>200</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	
+	var source_site_id = source.u_site_id;
+	var source_site_name = source.u_site_name;
+	var source_lattitude = source.u_lat;
+	var source_longitude = source.u_long;
+	var source_state = source.u_estado;
+	var source_municipality = source.u_municipio;
+	var source_region = source.u_region;
+	var source_owner = source.u_owner;
+	var source_type = source.u_type;
+	var candidates_validation_plan = gs.getProperty('x_attme_microwaves.SitesValidationPlanID');
+	var distance;
+	
+  	//buscamos primeramente el SOURCE SITE ID en la tabla de sitios
+	var gr = new GlideRecord('x_attme_microwaves_sites');
+	gr.addQuery('site_id', source_site_id);
+	gr.setLimit(1);
+	gr.query();
+	
+	//si se encuentra al menos un resultado con el source site ID
+	if(gr.getRowCount() > 0)
+	{
+		while(gr.next())
+		{
+			
+			//determinamos si la distancia entre la coordenadas del archivo y la que se encuentra actualmente el registro es menor a 1000 metros
+	
+	        distance = calculateDistance(source_lattitude, source_longitude, gr.lattitude, gr.longitude);
+	       			
+			//en el plan de validación la coordenada de un sitio pueda variar hasta por 1000 metros
+			if(distance<1000)
+			{
+			    gr.name = source_site_name;
+			    gr.lattitude = source_lattitude;
+			    gr.longitude = source_longitude;
+			    gr.location_state = source_state;
+				gr.location_municipality = source_municipality;
+				gr.location_region = source_region;
+				gr.owner = source_owner;
+				gr.type = source_type;
+				gr.update();
+			}
+			
+			//si se encuentra el site ID pero se supera los 1000 metros
+			else
+			{
+				gs.info("Site ID founded but coodenates differs over 1000 meters");
+			}
+		}
+	}
+	
+	//si no hay sitios con el SOURCE SITE ID entonces buscamos por el SITE NAME
+	if(gr.getRowCount() == 0)
+	{
+		
+		//ahora buscamos un sitio por SOURCE SITE NAME
+		var gr2 = new GlideRecord('x_attme_microwaves_sites');
+		gr2.addQuery('name', source_site_name);
+	    gr2.setLimit(1);
+	    gr2.query();
+		
+		//si se encuentra al menos un resultado con el source site name
+	    if(gr2.getRowCount() > 0)
+	    {
+		    while(gr2.next())
+		    { 
+				//determinamos si la distancia entre la coordenadas del archivo y la que se encuentra actualmente el registro es menor a 1000 metros
+				
+				 distance = calculateDistance(source_lattitude, source_longitude, gr2.lattitude, gr2.longitude);
+	            	
+				//en el plan de validación la coordenada de un sitio pueda variar hasta por 1000 ms	
+			    if(distance<1000)
+		    	{
+			        gr2.site_id = source_site_id;
+			        gr2.lattitude = source_lattitude;
+			        gr2.longitude = source_longitude;
+			        gr2.location_state = source_state;
+				    gr2.location_municipality = source_municipality;
+					gr2.location_region = source_region;
+					gr2.owner = source_owner;
+					gr2.type = source_type;
+					gr2.update();
+				}
+				
+				//si se encuentra un registro con el site name pero se superarn los 1000 metros
+				else
+			    {
+				     gs.info("Site NAME founded but coodenates differs over 1000 meters");
+			    }
+		    
+			}
+	    }
+		
+		//si no se encuentra ningun resultado con el Source site name
+		else
+		{
+			gs.info("Site ID/NAME not founded");
+		}
+	
+	}
+
+	//no se necesita procesar más información por lo que se ignora la carga del registro
+	ignore = true;
+	
+})(source, map, log, target);
+
+//función para calcular la distancia entre dos coordenadas
+function calculateDistance(lattitude1, longitude1, lattitude2, longitude2)
+{
+	var lat1 = lattitude1;
+    var lat2 = lattitude2;
+    var lon1 = longitude1;
+    var lon2 = longitude2;
+
+    var R = 6371; // Radius of the earth in km
+    var dLat = deg2rad(lat2-lat1);  // deg2rad below
+    var dLon = deg2rad(lon2-lon1); 
+    var a = Math.sin(dLat/2)*Math.sin(dLat/2) + Math.cos(deg2rad(lat1))*Math.cos(deg2rad(lat2))*Math.sin(dLon/2) * Math.sin(dLon/2); 
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    var d = R * c * 1000; // Distance in meters
+
+	return d;
+}
+
+function deg2rad(deg)
+{
+    return deg * (Math.PI/180);
+}]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-27 04:03:29</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>9ecf0384db94030028f3d5ab5e96194a</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_transform_script_9ecf0384db94030028f3d5ab5e96194a</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-28 15:49:09</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

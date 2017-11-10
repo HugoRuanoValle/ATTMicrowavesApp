@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="Microwaves request" max_length="40" name="x_attme_microwaves_microwaves_request" sizeclass="1" text_index="true" type="collection">
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Input document URL" mandatory="true" max_length="1024" name="input_document_url" type="url"/>
+        <element default="true" label="Manual assigment treatment" max_length="40" name="manual_assignment_treatment" read_only="true" type="boolean"/>
+        <element choice="1" label="On hold reason" max_length="40" name="on_hold_reason" type="choice">
+            <choice>
+                <element label="Awaiting user" sequence="0" value="Awaiting user"/>
+                <element label="Awaiting internal supplier" sequence="1" value="Awaiting internal supplier"/>
+                <element label="Awaiting external supplier" sequence="2" value="Awaiting external supplier"/>
+            </choice>
+        </element>
+        <element label="PMO" max_length="32" name="pmo" reference="sys_user" type="reference"/>
+        <element label="Project" max_length="32" name="project" reference="x_attme_datacom_proyectos" reference_qual="estado=Activo^EQ" reference_qual_condition="estado=Activo^EQ" type="reference"/>
+        <element default="0" label="Reject count" max_length="40" name="reject_count" read_only="true" type="integer"/>
+        <element label="Reject reason" max_length="5000" name="reject_reason" type="string"/>
+        <element default="javascript: gs.getUserID()" label="Requested for" mandatory="true" max_length="32" name="requested_for" read_only="true" reference="sys_user" type="reference"/>
+        <element default="javascript: getDepartmentID(gs.getUserID())" label="Requested for area" max_length="32" name="requested_for_area" read_only="true" reference="cmn_department" type="reference"/>
+        <element label="Resolved" max_length="40" name="resolved" read_only="true" type="glide_date_time"/>
+        <element label="Resolved by" max_length="32" name="resolved_by" read_only="true" reference="sys_user" type="reference"/>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Solution document URL" max_length="1024" name="solution_document_url" type="url"/>
+    </element>
+</database>

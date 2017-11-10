@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_catalog_view_mtom">
+    <sc_catalog_view_mtom action="INSERT_OR_UPDATE">
+        <default>true</default>
+        <sc_catalog display_value="Microwaves Service Catalog">d5c11013dbb37a00e7bbdbbb5e961939</sc_catalog>
+        <sys_class_name>sc_catalog_view_mtom</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-11 19:36:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bad11013dbb37a00e7bbdbbb5e96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Microwaves Service Catalog.catalog_microwaves_service_catalog</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_portal_page display_value="Microwaves catalog">36d11013dbb37a00e7bbdbbb5e96193c</sys_portal_page>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sc_catalog_view_mtom_bad11013dbb37a00e7bbdbbb5e96193c</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-07-11 19:36:25</sys_updated_on>
+    </sc_catalog_view_mtom>
+</record_update>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Candidates validation supplier" max_length="40" name="x_attme_microwaves_candidates_validation_supplier" type="collection">
+        <element label="Contact email" mandatory="true" max_length="200" name="contact_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Contact person name" mandatory="true" max_length="40" name="contact_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Supplier's name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Opened" max_length="40" name="opened_at" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
+        <element default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Opened by" max_length="32" name="opened_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="opened_by"/>
+        </index>
+    </element>
+</database>

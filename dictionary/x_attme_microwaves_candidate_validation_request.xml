@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Candidates validation request" max_length="40" name="x_attme_microwaves_candidate_validation_request" sizeclass="4" type="collection">
+        <element label="Candidates validation plan" max_length="32" name="candidates_validation_plan" read_only="true" reference="x_attme_microwaves_candidate_validations_plan" type="reference"/>
+        <element label="Collo Ap approval granted date" max_length="40" name="collo_ap_approval_granted_date" type="glide_date"/>
+        <element label="Collo Ap approval request date " max_length="40" name="collo_ap_approval_request_date" type="glide_date"/>
+        <element label="Documentation deliverd by supplier date" max_length="40" name="documentation_deliverd_by_supplier_date" type="glide_date"/>
+        <element label="Number of candidates" mandatory="true" max_length="40" name="number_of_candidates" type="integer"/>
+        <element hint="Point A status" label="PA status" max_length="60" name="pa_status" type="string"/>
+        <element hint="Point B status" label="PB status" max_length="60" name="pb_status" type="string"/>
+        <element label="Planned" max_length="40" name="planned" read_only="true" type="boolean"/>
+        <element label="Points B access granted date" max_length="40" name="points_b_access_granted_date" type="glide_date"/>
+        <element label="Points B validated date " max_length="40" name="points_b_validated_date" type="glide_date"/>
+        <element label="Points A visit date" max_length="40" name="point_a_visit_date" type="glide_date"/>
+        <element label="Points B access request date" max_length="40" name="point_b_access_request_date" type="glide_date"/>
+        <element label="SAC Leader" max_length="60" name="sac_leader" type="string"/>
+        <element label="Site" mandatory="true" max_length="32" name="site" reference="x_attme_microwaves_sites" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Substate" max_length="40" name="substate" type="string">
+            <choice>
+                <element label="Supplier assigned" sequence="0" value="Supplier assigned"/>
+                <element label="Points A visited" sequence="1" value="Points A visited"/>
+                <element label="Points B access requested" sequence="2" value="Points B access requested"/>
+                <element label="Points B access granted" sequence="3" value="Points B access granted"/>
+                <element label="Points B validated" sequence="4" value="Points B validated"/>
+                <element label="Supplier's documentation delivered" sequence="5" value="Supplier's documentation delivered"/>
+                <element label="Collo Ap approval requested" sequence="6" value="Collo Ap approval requested"/>
+                <element label="Collo Ap approval granted" sequence="7" value="Collo Ap approval granted"/>
+                <element label="TRR documentation delivered" sequence="8" value="TRR documentation delivered"/>
+            </choice>
+        </element>
+        <element label="Supplier" max_length="32" name="supplier" reference="x_attme_microwaves_candidates_validation_supplier" type="reference"/>
+        <element label="Supplier assignment date" max_length="40" name="supplier_assignment_date" type="glide_date"/>
+        <element label="Supplier notified" max_length="40" name="supplier_notified" read_only="true" type="boolean"/>
+        <element label="Time to get approved access to points B" max_length="40" name="time_to_access_to_points_b" read_only="true" type="glide_duration"/>
+        <element label="Time to deliver TRR documentation" max_length="40" name="time_to_deliver_trr_documentation" read_only="true" type="glide_duration"/>
+        <element label="Time to get Collo ap approval" max_length="40" name="time_to_get_collo_ap_approval" read_only="true" type="glide_duration"/>
+        <element label="Time to recieve documentation of supplier" max_length="40" name="time_to_recieve_documentation_of_supplier" read_only="true" type="glide_duration"/>
+        <element label="Time to validate points B" max_length="40" name="time_to_validate_points_b" read_only="true" type="glide_duration"/>
+        <element label="TRR documentation sended to SAC date" max_length="40" name="trr_documentation_sended_to_sac_date" type="glide_date"/>
+        <element choice="1" label="Validation cause" mandatory="true" max_length="40" name="validation_cause" type="choice">
+            <choice>
+                <element label="Validations plan" sequence="0" value="Validations plan"/>
+                <element label="Special event" sequence="1" value="Special event"/>
+                <element label="Contigency" sequence="2" value="Contigency"/>
+            </choice>
+        </element>
+        <element label="Validation process comments" max_length="1000" name="validation_process_comments" type="string"/>
+        <element label="Proposed visit date/time" mandatory="true" max_length="40" name="visit_date_time" type="glide_date_time"/>
+        <element label="Visit week" max_length="40" name="visit_week" type="integer"/>
+    </element>
+</database>

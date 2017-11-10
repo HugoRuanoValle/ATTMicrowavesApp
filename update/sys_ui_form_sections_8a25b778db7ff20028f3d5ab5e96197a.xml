@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="8a25b778db7ff20028f3d5ab5e96197a" sys_domain="global" table="x_attme_microwaves_microwaves_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 17:44:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0225b778db7ff20028f3d5ab5e96197b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_attme_microwaves_microwaves_request" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">8a25b778db7ff20028f3d5ab5e96197a</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">24a3fbf4db7ff20028f3d5ab5e9619cf</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 17:44:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 17:44:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8225b778db7ff20028f3d5ab5e96197b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_attme_microwaves_microwaves_request" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">8a25b778db7ff20028f3d5ab5e96197a</sys_ui_form>
+            <sys_ui_section caption="Worklog" display_value="Worklog" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">0625b778db7ff20028f3d5ab5e96197a</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 17:44:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 18:04:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>97a97bb8db7ff20028f3d5ab5e9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_attme_microwaves_microwaves_request" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">8a25b778db7ff20028f3d5ab5e96197a</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">dba97bb8db7ff20028f3d5ab5e9619f5</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 18:04:27</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 18:04:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6ba97bb8db7ff20028f3d5ab5e9619f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_attme_microwaves_microwaves_request" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">8a25b778db7ff20028f3d5ab5e96197a</sys_ui_form>
+            <sys_ui_section caption="Closure Information" display_value="Closure Information" name="x_attme_microwaves_microwaves_request" sys_domain="global" view="Default view">13a97bb8db7ff20028f3d5ab5e9619f6</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 18:04:27</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_attme_microwaves_microwaves_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-04 17:44:42</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a25b778db7ff20028f3d5ab5e96197a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_attme_microwaves_microwaves_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_ui_form_sections_8a25b778db7ff20028f3d5ab5e96197a</sys_update_name>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-04 17:44:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

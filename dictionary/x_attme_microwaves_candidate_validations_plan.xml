@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Candidates validation plan" max_length="40" name="x_attme_microwaves_candidate_validations_plan" sizeclass="2" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Plan name" mandatory="true" max_length="40" name="plan_name" type="string"/>
+        <element hint="Indicates if there are Candidates validation requests that are not notified" label="Suppliers to notify" max_length="40" name="suppliers_to_notify" read_only="true" type="boolean"/>
+    </element>
+</database>

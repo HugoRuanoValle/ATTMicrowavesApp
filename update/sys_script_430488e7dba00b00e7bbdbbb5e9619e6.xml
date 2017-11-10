@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_attme_microwaves_candidate_validation_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_attme_microwaves_candidate_validation_request">stateIN12,13,2,9,6^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="12,13,2,9,6"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CVP substate control</name>
+        <order>90</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+// esta business rule controla el campo substate en las candidates validation requests, dependiendo del llenado de las fechas en el Excel se determina el substate apropiado
+	
+	//si ya se realizó la asignación del proveedor
+	if(!current.supplier.nil())
+	{
+		current.substate = 'Supplier assigned';
+	}
+	
+	//si ya se realizo la visita a las puntas A pero un no se solicita acceso a puntas B
+	if(!current.point_a_visit_date.nil() && current.point_b_access_request_date.nil())
+	{
+		current.substate = 'Points A visited';
+	}
+	
+	//si ya se solicito el acceso a las puntas B pero aun no se visitan puntas A
+	if(!current.point_b_access_request_date.nil() && current.point_a_visit_date.nil())
+	{
+		current.substate = 'Points B access requested';
+	}
+	
+	//si ya se visitaron tanto puntas A como se solicitaron accesos de puntas B 
+	if(!current.point_a_visit_date.nil() && !current.point_b_access_request_date.nil()  )
+	{
+		current.substate = 'Points B access requested';
+	}
+	
+	//si ya se otorgo el acceso a las puntas B
+	if(!current.points_b_access_granted_date.nil())
+	{
+		current.substate = 'Points B access granted';
+	}
+	
+	//si ya se realizo la validación de las puntas N
+	if(!current.points_b_validated_date.nil())
+	{
+		current.substate = 'Points B validated';
+	}
+	
+	//si ya se entrego la documentación por parte del proveedor
+	if(!current.documentation_deliverd_by_supplier_date.nil())
+	{
+		current.substate = "Supplier's documentation delivered";
+	}
+	
+	//si ya se solicito la aprobación de Collo Ap
+	if(!current.collo_ap_approval_request_date.nil())
+	{
+		current.substate = 'Collo Ap approval requested';
+	}
+	
+	//si ya se otorgo la aprobación de Collo Ap
+	if(!current.collo_ap_approval_request_date.nil())
+	{
+		current.substate = 'Collo Ap approval granted';
+	}
+	
+	//si ya se entrego la documentación TRR a SAC
+		if(!current.trr_documentation_sended_to_sac_date.nil())
+	{
+		current.substate = 'TRR documentation delivered';
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-18 20:11:36</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>430488e7dba00b00e7bbdbbb5e9619e6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>CVP substate control</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_430488e7dba00b00e7bbdbbb5e9619e6</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-25 15:30:04</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=430488e7dba00b00e7bbdbbb5e9619e6"/>
+</record_update>

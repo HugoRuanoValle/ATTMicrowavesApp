@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW desing team deliverable" max_length="40" name="x_attme_microwaves_mw_desing_team_deliverable" type="collection">
+        <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda,edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda" max_length="40" name="u_ancho__de__banda" type="string"/>
+        <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda (T),edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda (T)" max_length="40" name="u_ancho__de__banda__t_" type="string"/>
+        <element attributes="import_attribute_name=Antena,edge_encryption_enabled=true" label="Antena" max_length="40" name="u_antena" type="string"/>
+        <element attributes="import_attribute_name=Antena (O),edge_encryption_enabled=true" label="Antena (O)" max_length="40" name="u_antena__o_" type="string"/>
+        <element attributes="import_attribute_name=Banda,edge_encryption_enabled=true" label="Banda" max_length="40" name="u_banda" type="string"/>
+        <element attributes="import_attribute_name=Banda (R),edge_encryption_enabled=true" label="Banda (R)" max_length="40" name="u_banda__r_" type="string"/>
+        <element attributes="import_attribute_name=Cambio,edge_encryption_enabled=true" label="Cambio" max_length="40" name="u_cambio" type="string"/>
+        <element attributes="import_attribute_name=Capacidad,edge_encryption_enabled=true" label="Capacidad" max_length="40" name="u_capacidad" type="string"/>
+        <element attributes="import_attribute_name=Capacidad (U),edge_encryption_enabled=true" label="Capacidad (U)" max_length="40" name="u_capacidad__u_" type="string"/>
+        <element attributes="import_attribute_name=COMENTARIOS,edge_encryption_enabled=true" label="COMENTARIOS" max_length="51" name="u_comentarios" type="string"/>
+        <element attributes="import_attribute_name=Enlace,edge_encryption_enabled=true" label="Enlace" max_length="40" name="u_enlace" type="string"/>
+        <element attributes="import_attribute_name=Equipo,edge_encryption_enabled=true" label="Equipo" max_length="40" name="u_equipo" type="string"/>
+        <element attributes="import_attribute_name=Equipo (N),edge_encryption_enabled=true" label="Equipo (N)" max_length="40" name="u_equipo__n_" type="string"/>
+        <element attributes="import_attribute_name=Modulacion,edge_encryption_enabled=true" label="Modulacion" max_length="40" name="u_modulacion" type="string"/>
+        <element attributes="import_attribute_name=Modulacion (S),edge_encryption_enabled=true" label="Modulacion (S)" max_length="40" name="u_modulacion__s_" type="string"/>
+        <element attributes="import_attribute_name=Nivel &#10;Recepcion&#10;(dBm),edge_encryption_enabled=true" label="Nivel &#10;Recepcion&#10;(dBm)" max_length="40" name="u_nivel__recepcion__dbm_" type="string"/>
+        <element attributes="import_attribute_name=Nivel &#10;Recepcion&#10;(dBm) (W)" label="Nivel &#10;Recepcion&#10;(dBm) (W)" max_length="15" name="u_nivel__recepcion__dbm___w_" type="decimal"/>
+        <element attributes="import_attribute_name=Potencia&#10;(dBm),edge_encryption_enabled=true" label="Potencia&#10;(dBm)" max_length="40" name="u_potencia__dbm_" type="string"/>
+        <element attributes="import_attribute_name=Potencia&#10;(dBm) (V)" label="Potencia&#10;(dBm) (V)" max_length="15" name="u_potencia__dbm___v_" type="decimal"/>
+        <element attributes="import_attribute_name=Site 1 Name,edge_encryption_enabled=true" label="Site 1 Name" max_length="40" name="u_site_1_name" type="string"/>
+        <element attributes="import_attribute_name=Site 2 Name,edge_encryption_enabled=true" label="Site 2 Name" max_length="40" name="u_site_2_name" type="string"/>
+        <element attributes="import_attribute_name=TX Freq&#10; (MHz),edge_encryption_enabled=true" label="TX Freq&#10; (MHz)" max_length="40" name="u_tx_freq___mhz0" type="string"/>
+        <element attributes="import_attribute_name= TX Freq&#10; (MHz),edge_encryption_enabled=true" label=" TX Freq&#10; (MHz)" max_length="40" name="u_tx_freq___mhz_" type="string"/>
+        <element attributes="import_attribute_name= TX Freq&#10; (MHz) (P)" label=" TX Freq&#10; (MHz) (P)" max_length="15" name="u_tx_freq___mhz___p_" type="decimal"/>
+        <element attributes="import_attribute_name=TX Freq&#10; (MHz) (Q)" label="TX Freq&#10; (MHz) (Q)" max_length="15" name="u_tx_freq___mhz___q_" type="decimal"/>
+    </element>
+</database>

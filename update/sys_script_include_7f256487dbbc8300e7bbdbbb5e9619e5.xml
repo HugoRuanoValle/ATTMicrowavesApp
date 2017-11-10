@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_attme_microwaves.getCVPErrorsOnAttachLoad</api_name>
+        <client_callable>true</client_callable>
+        <description>Este script include es usado por medio de GlideAjax por el client script "CVP show errors in CVR import"</description>
+        <name>getCVPErrorsOnAttachLoad</name>
+        <script><![CDATA[var getCVPErrorsOnAttachLoad = Class.create();
+getCVPErrorsOnAttachLoad.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getErrors: function() {
+		
+		var cvp_table = this.getParameter('sysparm_cvp_table');
+		var cvp_id = this.getParameter('sysparm_cvp_id');
+		var errors = '';
+		
+		//buscamos en el set correspondiente al CVP
+		var set =  new GlideRecord('sys_history_set');
+		set.addQuery('table', cvp_table);
+		set.addQuery('id', cvp_id);
+		set.query();
+		
+		
+		if(set.next())
+		{   
+			//buscamos todas las lines de "comments" y las ordenamos
+			var line = new GlideRecord('sys_history_line');
+			line.addQuery('set', set.sys_id);
+			line.addQuery('field', 'comments');
+			line.orderByDesc('update'); //ordenamos por el campo "update number"
+			line.query();
+			
+			while(line.next())
+			{
+				if(line.new.indexOf('ERROR') > -1)
+				{
+				    errors = errors + "<br/>" + line.new;
+				}
+				
+				if(line.new.indexOf('Attachment') > -1)
+				{
+					break;
+				}
+			}
+			
+		}
+		
+		var result = this.newItem("result");
+		result.setAttribute("errors", errors);		
+		
+	},
+	
+	type: 'getCVPErrorsOnAttachLoad'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-29 19:40:17</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7f256487dbbc8300e7bbdbbb5e9619e5</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>getCVPErrorsOnAttachLoad</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_include_7f256487dbbc8300e7bbdbbb5e9619e5</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-29 20:11:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

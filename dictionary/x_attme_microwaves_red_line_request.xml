@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Red line request" max_length="40" name="x_attme_microwaves_red_line_request" sizeclass="1" type="collection">
+        <element label="Site" mandatory="true" max_length="32" name="site" reference="x_attme_microwaves_sites" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Site ID vendor" max_length="40" name="site_id_vendor" type="string"/>
+        <element label="Vendor" mandatory="true" max_length="32" name="vendor" reference="x_attme_microwaves_candidates_validation_supplier" type="reference"/>
+    </element>
+</database>

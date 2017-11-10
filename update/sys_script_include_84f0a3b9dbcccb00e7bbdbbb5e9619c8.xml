@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_attme_microwaves.getMinimunVRCRequestedDate</api_name>
+        <client_callable>true</client_callable>
+        <description>EL presente script include sirve para determinar en una "candidates validation request" si la diferencia entre el campo "opened_at" y "requested_for_date" es mayor a 48 horas.</description>
+        <name>getMinimunVRCRequestedDate</name>
+        <script><![CDATA[var getMinimunVRCRequestedDate = Class.create();
+getMinimunVRCRequestedDate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getMinimumRequestedDate: function() {
+		
+		var opened_at_parm = this.getParameter('sysparm_opened_at');
+		var requested_for_date_parm = this.getParameter('sysparm_requested_for_date');
+		
+		//gs.addInfoMessage('Opened at: ' + opened_at_parm);
+		//gs.addInfoMessage('Requested for date: ' + requested_for_date_parm);
+		
+		var opened_at = new GlideDateTime(opened_at_parm);
+		var requested_for_date = new GlideDateTime(requested_for_date_parm);
+		var sched_sysid = gs.getProperty('x_attme_microwaves.MicrowavesWorkingDays24HoursSchedule');
+		
+		var sched = new GlideSchedule(sched_sysid, 'Mexico/General');
+		var duration = sched.duration(opened_at, requested_for_date);
+		var duration_value = duration.getDurationValue();
+		//gs.addInfoMessage("start: " + opened_at);
+		//gs.addInfoMessage("end: " + requested_for_date);
+		//gs.addInfoMessage("duration: " + duration_value);
+		
+		var duration_str = duration_value.toString();
+		
+		//seccionamos el valor de la duración
+		var days;
+		var hours;
+		var minutes;
+		var seconds;
+		
+		if(duration_str.indexOf(" ") > -1) //se determina si existen días en la duración, si hay espacios entonces es una duración con días
+			{
+			
+			var split_1 = duration_str.split (" "); //dividimos la cadena considerando el espacio
+			days = parseInt(split_1[0]);
+			//gs.addInfoMessage("Days: " + days);
+			
+			var split_2 = split_1[1].split(":"); //dividimos la cadena considerando los dos puntos
+			hours = parseInt(split_2[0]);
+			minutes = parseInt(split_2[1]);
+			seconds = parseInt(split_2[2]);
+			
+			//gs.addInfoMessage("Hours: " +  hours);
+			//gs.addInfoMessage("Minutes: " + minutes);
+			//gs.addInfoMessage("Seconds: " + seconds);
+		}
+		
+		else
+			{
+			var split_3 = duration_str.split(":"); //dividimos la cadena considerando los dos puntos
+			days = '0';
+			//gs.addInfoMessage("Days: " + days);
+			
+			hours = parseInt(split_3[0]);
+			minutes = parseInt(split_3[1]);
+			seconds = parseInt(split_3[2]);
+			
+			//gs.addInfoMessage("Hours: " +  hours);
+			//gs.addInfoMessage("Minutes: " + minutes);
+			//gs.addInfoMessage("Seconds: " + seconds);
+		}
+		
+		var total_hours = (24*days) + hours;
+		//gs.addInfoMessage("Total hours: " + total_hours);
+		
+		var result = this.newItem("result");
+		result.setAttribute("total_hours", total_hours);
+	},
+		
+	type: 'getMinimunVRCRequestedDate'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-20 05:13:47</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>84f0a3b9dbcccb00e7bbdbbb5e9619c8</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>getMinimunVRCRequestedDate</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_include_84f0a3b9dbcccb00e7bbdbbb5e9619c8</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-25 21:43:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

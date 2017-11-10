@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_attme_microwaves.deleteSiteRecord</event_name>
+        <name>SITE delete record</name>
+        <order>100</order>
+        <script><![CDATA[//con este script action se borra un registro de sitio de manera asincrona
+
+(function notifySuppliers() {
+	
+	//declaramos variables y constantes
+	var site_table = event.parm1; //site table
+	var site_id = event.parm2; //sys_id of the site record
+	
+	var site = new GlideRecord(site_table);
+	site.addQuery('sys_id', site_id);
+	site.query();
+	
+	if(site.next())
+	{
+		site.deleteRecord();
+	}
+		
+	
+}());]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-09-05 16:08:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>166bb3c5db054700e7bbdbbb5e961905</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SITE delete record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysevent_script_action_166bb3c5db054700e7bbdbbb5e961905</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-26 20:16:40</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

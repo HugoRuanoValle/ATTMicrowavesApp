@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_attme_datacom_port_assignment" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>67a45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>location</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>e7a45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>quantity_total</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>6ba45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>speed</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>eba45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>type</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>6fa45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>only_for_fiber</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>efa45dbbdb60ba0028f3d5ab5e961937</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>redundant</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>63a45dbbdb60ba0028f3d5ab5e961938</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number_forcasted_hosts</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>e3a45dbbdb60ba0028f3d5ab5e961938</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>nat_required</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>67a45dbbdb60ba0028f3d5ab5e961938</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>servicios</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>e7a45dbbdb60ba0028f3d5ab5e961938</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>datacom_request</element>
+            <list_id display_value="x_attme_datacom_port_assignment" element="NULL" name="x_attme_datacom_port_assignment" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">23a45dbbdb60ba0028f3d5ab5e961937</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>10</position>
+            <sum>false</sum>
+            <sys_created_by>angel.pineda</sys_created_by>
+            <sys_created_on>2017-02-02 00:21:17</sys_created_on>
+            <sys_id>6ba45dbbdb60ba0028f3d5ab5e961938</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-02-02 00:21:17</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_attme_datacom_port_assignment</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-08 03:06:49</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd25a046db05430028f3d5ab5e9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_attme_datacom_port_assignment</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_ui_list_x_attme_datacom_port_assignment_null</sys_update_name>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-08 03:06:49</sys_updated_on>
+            <sys_user display_value="Hugo Ernesto Ruano Valle">59f351e6db53b60028f3d5ab5e961947</sys_user>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

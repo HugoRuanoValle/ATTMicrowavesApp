@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script>event.parm1 == 'x_attme_microwaves_candidate_validation_request'</condition_script>
+        <description/>
+        <event_name>x_attme_microwaves.notify_suppliers_cvr</event_name>
+        <name>CVR notify supplier</name>
+        <order>100</order>
+        <script><![CDATA[//Envia notificaciones a los proveedores, si se cambia el proveedor en alguna "candidates validation request", este script action es disparado con la  UI action "notify suppliers".
+
+
+(function notifySuppliers() {
+	
+	//declaramos variables y constantes
+	var cvr_table = event.parm1; //cvr table
+	var cvr = event.parm2; //sys_id of the cvr record
+	
+	var today = new GlideDate();
+	var now = new GlideDateTime();
+	now.addSeconds(-10); // last 10 seconds
+	var now_minutes_ago = now.getValue();
+	var supplier_id = [];
+	var new_supplier_id = [];
+	
+	
+	//inicializamos variables de report y scheduled report
+	var report_type = "list";
+	var report_chart_size = "large";
+	var report_table = 'x_attme_microwaves_candidate_validation_request';
+	var report_field_list = "number,supplier,site.site_id,site.name,site.location_municipality,site.location_state,site.lattitude,site.longitude,visit_date_time";
+	var report_is_published = false;
+	
+	var scheduled_report_run_type = 'on_demand';
+	var scheduled_report_active = true;
+	var scheduled_report_output_type = 'PDF-landscape';
+	var scheduled_report_group_list = gs.getProperty('x_attme_microwaves.DefaultAssignmentGroupCandidatesValidationRequest');
+	
+	//en un ejecución anterior se crean reportes y schedules reports, se borran antes de crear nuevos
+	//borramos los reportes
+	var previous_report = new GlideRecord('sys_report');
+	previous_report.addQuery('title', 'CONTAINS', 'AT&T - New candidates validation requests');
+	previous_report.query();
+	
+	while(previous_report.next())
+	{   global.deleteRecordFromScoppedApp('sys_report', previous_report.sys_id);   }
+	
+	//borramos los scheduled reports
+	var previous_schedule = new GlideRecord('sysauto_report');
+	previous_schedule.addQuery('name', 'CONTAINS', "MW Notify CVR's to supplier");
+	previous_schedule.query();
+	
+	while(previous_schedule.next())
+	{   global.deleteRecordFromScoppedApp('sysauto_report', previous_schedule.sys_id);   }
+	
+	
+	//buscamos el registro del proveedor al cual se le enviara el email
+	var validation_request = new GlideRecord(cvr_table);
+	validation_request.addQuery('sys_id', cvr);
+	validation_request.query();
+	
+	if(validation_request.next())
+	{
+		var supplier = new GlideRecord('x_attme_microwaves_candidates_validation_supplier');
+		supplier.addQuery('sys_id', validation_request.supplier);
+		supplier.query();
+		
+		
+		if(supplier.next())
+		{
+			
+			//se verifica que el proveedor posea un correo en el campo "contact email"
+			if(!supplier.contact_email.nil() && supplier.contact_email.indexOf('@') > -1)
+			{
+			
+				//creamos un reporte con los CVRs a notificar para el proveedor
+				var report_title = "AT&T - New candidates validation requests - " + supplier.name + " (" + today + ")";
+				var report_filter =  "number=" + validation_request.number + "^sys_id=" + validation_request.sys_id+"^EQ";
+				
+				var report_id = global.createListReportFromScopedApp(report_title, report_type, report_chart_size, report_table, report_filter, report_field_list, report_is_published);
+				
+				
+				//se crea un scheduled report para el envio al proveedor
+				var scheduled_report_name = "MW Notify CVR's to suppliers/" + supplier.name + "/" + today;
+				var scheduled_report_subject = "Nuevas solicitudes de validación para " + supplier.name + " (" + today + ")";
+				var scheduled_report_body = '<p><span style="font-family: verdana, geneva;">Estimado(a) ' + supplier.contact_name + '</span></p> <p><span style="font-family: verdana, geneva;">Favor de considerar la validaci&oacute;n de los sitios detallados en el archivo adjunto.</span></p> <p><span style="font-family: verdana, geneva;">Saludos</span></p>';
+				var scheduled_report_report_id = report_id; //reporte creado en el paso anterior
+				var scheduled_report_address_list = supplier.contact_email;
+				
+				var scheduled_report =  global.createScheduledReportFromScopedApp(scheduled_report_name, scheduled_report_report_id, scheduled_report_run_type, scheduled_report_active, scheduled_report_address_list, scheduled_report_subject, scheduled_report_body, scheduled_report_output_type, scheduled_report_group_list);
+				
+				//ejecutamos el scheduled report
+				global.executeScopedAppScheduledReport(scheduled_report);
+				
+				//esperamos hasta que se determine que ya se ha creado el correo al proveedor
+				while(true)
+				{
+					var email = new GlideRecord('sys_email');
+					email.addQuery('sys_created_on', '>=', now_minutes_ago);
+					email.addQuery('recipients', 'CONTAINS', supplier.contact_email);
+					email.addQuery('subject', 'CONTAINS', 'Nuevas solicitudes de validación');
+					email.query();
+					
+					if(email.next())
+					{
+						global.updateGlobalRecordFromScoppedApp('sys_email', email.sys_id, 'instance', cvr);
+						global.updateGlobalRecordFromScoppedApp('sys_email', email.sys_id, 'target_table', 'x_attme_microwaves_candidate_validation_request');
+						
+						break; //si se encuentra un mail creado para el proveedor entonces se salta el ciclo
+					}
+				}
+				
+				//se marca la solicitud como notificada al proveedor
+				validation_request.supplier_notified = true;
+				validation_request.update();
+				
+			}
+			
+			else if(supplier.contact_email.nil())
+			{
+				gs.addErrorMessage("Was not possible to send report to supplier "+ supplier.name + "because there is no information in Contact email");
+				
+				//el siguiente contador se aumenta, con esto se determina que al menos un proveedor no tiene información en el campo "contact email"
+				cont_contact_email_errors ++;
+			}
+			
+		}
+	}
+	
+	
+}());]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-29 15:01:19</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4bc867b6db7c830028f3d5ab5e96192b</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>CVR notify supplier</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysevent_script_action_4bc867b6db7c830028f3d5ab5e96192b</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-09-07 18:28:17</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

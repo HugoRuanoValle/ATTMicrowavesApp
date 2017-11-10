@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW sites initial import" max_length="40" name="x_attme_microwaves_mw_sites_initial_import" type="collection">
+        <element attributes="import_attribute_name=AZIMUTH PB,edge_encryption_enabled=true" label="AZIMUTH PB" max_length="40" name="u_azimuth_pb" type="string"/>
+        <element attributes="import_attribute_name=Azimuth [°],edge_encryption_enabled=true" label="Azimuth [°]" max_length="40" name="u_azimuth____" type="string"/>
+        <element attributes="import_attribute_name=Band (GHz),edge_encryption_enabled=true" label="Band (GHz)" max_length="40" name="u_band__ghz_" type="string"/>
+        <element attributes="import_attribute_name=CANDIDATE,edge_encryption_enabled=true" label="CANDIDATE" max_length="40" name="u_candidate" type="string"/>
+        <element attributes="import_attribute_name=CITY,edge_encryption_enabled=true" label="CITY" max_length="40" name="u_city" type="string"/>
+        <element attributes="import_attribute_name=COMMENTS,edge_encryption_enabled=true" label="COMMENTS" max_length="256" name="u_comments" type="string"/>
+        <element attributes="import_attribute_name=Dish diameter,edge_encryption_enabled=true" label="Dish diameter" max_length="40" name="u_dish_diameter" type="string"/>
+        <element attributes="import_attribute_name=EQUIPMENT/TECHNOLOGY,edge_encryption_enabled=true" label="EQUIPMENT/TECHNOLOGY" max_length="40" name="u_equipment_technology" type="string"/>
+        <element attributes="import_attribute_name=FRINGE,edge_encryption_enabled=true" label="FRINGE" max_length="40" name="u_fringe" type="string"/>
+        <element attributes="import_attribute_name=Height [m] ASNP,edge_encryption_enabled=true" label="Height [m] ASNP" max_length="40" name="u_height__m__asnp" type="string"/>
+        <element attributes="import_attribute_name=ID OWNER/VENDOR,edge_encryption_enabled=true" label="ID OWNER/VENDOR" max_length="40" name="u_id_owner_vendor" type="string"/>
+        <element attributes="import_attribute_name=LATITUDE,edge_encryption_enabled=true" label="LATITUDE" max_length="40" name="u_latitude" type="string"/>
+        <element attributes="import_attribute_name=LONGITUDE,edge_encryption_enabled=true" label="LONGITUDE" max_length="40" name="u_longitude" type="string"/>
+        <element attributes="import_attribute_name=MUNICIPALITY,edge_encryption_enabled=true" label="MUNICIPALITY" max_length="40" name="u_municipality" type="string"/>
+        <element attributes="import_attribute_name=OWNER/VENDOR,edge_encryption_enabled=true" label="OWNER/VENDOR" max_length="40" name="u_owner_vendor" type="string"/>
+        <element attributes="import_attribute_name=PARTNER,edge_encryption_enabled=true" label="PARTNER" max_length="40" name="u_partner" type="string"/>
+        <element attributes="import_attribute_name=PROJECT,edge_encryption_enabled=true" label="PROJECT" max_length="40" name="u_project" type="string"/>
+        <element attributes="import_attribute_name=REGION,edge_encryption_enabled=true" label="REGION" max_length="40" name="u_region" type="string"/>
+        <element attributes="import_attribute_name=Remote Height [m] ASNP,edge_encryption_enabled=true" label="Remote Height [m] ASNP" max_length="40" name="u_remote_height__m__asnp" type="string"/>
+        <element attributes="import_attribute_name=Remote Link,edge_encryption_enabled=true" label="Remote Link" max_length="40" name="u_remote_link" type="string"/>
+        <element attributes="import_attribute_name=SITE ID,edge_encryption_enabled=true" label="SITE ID" max_length="40" name="u_site_id" type="string"/>
+        <element attributes="import_attribute_name=SITE NAME,edge_encryption_enabled=true" label="SITE NAME" max_length="40" name="u_site_name" type="string"/>
+        <element attributes="import_attribute_name=Space diversity [Yes/No],edge_encryption_enabled=true" label="Space diversity [Yes/No]" max_length="40" name="u_space_diversity__yes_no_" type="string"/>
+        <element attributes="import_attribute_name=STATE,edge_encryption_enabled=true" label="STATE" max_length="40" name="u_state" type="string"/>
+        <element attributes="import_attribute_name=STATUS LOS,edge_encryption_enabled=true" label="STATUS LOS" max_length="40" name="u_status_los" type="string"/>
+        <element attributes="import_attribute_name=TX,edge_encryption_enabled=true" label="TX" max_length="40" name="u_tx" type="string"/>
+        <element attributes="import_attribute_name=TYPE,edge_encryption_enabled=true" label="TYPE" max_length="40" name="u_type" type="string"/>
+    </element>
+</database>

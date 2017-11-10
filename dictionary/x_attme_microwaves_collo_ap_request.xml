@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Collo ap request" max_length="40" name="x_attme_microwaves_collo_ap_request" sizeclass="41" type="collection">
+        <element label="Activity A" mandatory="true" max_length="200" name="activity_a" type="string"/>
+        <element label="Activity B" mandatory="true" max_length="200" name="activity_b" type="string"/>
+        <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point A antenna model" mandatory="true" max_length="50" name="point_a_antenna_model" type="string"/>
+        <element label="Point A azimuth" mandatory="true" max_length="40" name="point_a_azimuth" type="float"/>
+        <element label="Point A diameter" mandatory="true" max_length="40" name="point_a_diameter" type="float"/>
+        <element label="Point A height" mandatory="true" max_length="40" name="point_a_height" type="float"/>
+        <element label="Point A owner" mandatory="true" max_length="200" name="point_a_owner" type="string"/>
+        <element label="Point A owner ID" mandatory="true" max_length="50" name="point_a_owner_id" type="string"/>
+        <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B antenna model" mandatory="true" max_length="50" name="point_b_antenna_model" type="string"/>
+        <element label="Point B azimuth" mandatory="true" max_length="40" name="point_b_azimuth" type="float"/>
+        <element label="Point B diameter" mandatory="true" max_length="40" name="point_b_diameter" type="float"/>
+        <element label="Point B height" mandatory="true" max_length="40" name="point_b_height" type="float"/>
+        <element label="Point B owner" mandatory="true" max_length="200" name="point_b_owner" type="string"/>
+        <element label="Point B owner ID" mandatory="true" max_length="50" name="point_b_owner_id" type="string"/>
+        <element label="Space diversity" max_length="40" name="space_diversity" type="boolean"/>
+        <element label="Work order request" max_length="32" name="work_order_request" read_only="true" reference="x_attme_microwaves_work_order_request" type="reference"/>
+    </element>
+</database>

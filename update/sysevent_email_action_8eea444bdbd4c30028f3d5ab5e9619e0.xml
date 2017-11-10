@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <collection>task_sla</collection>
+        <condition/>
+        <content_type>multipart/mixed</content_type>
+        <description>Esta notificación se dispara al "assigned to" y al manager del grupo asignado cuandos se ha consumido un 75% del tiempo de SLA.</description>
+        <event_name>mw.solution.sla.warning.75</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Buen d&iacute;a</p>
+<p><span style="font-family: verdana, geneva;">Se les notifica que se ha consumido un 75% del tiempo de SLA para la solicitud <em>${task.number} - ${task.short_description}</em>, si desean conocer el detalle del tiempo consumido y la fecha/hora de consumo total pueden consultar la siguiente liga: ${URI}</span></p>
+<p><span style="font-family: verdana, geneva;">Saludo</span>s&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>SLA solution warning 75%</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>task.assigned_to,task.assignment_group.manager</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Advertencia SLA  de solución 75% - ${task.number} - ${task.short_description}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-04 20:58:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8eea444bdbd4c30028f3d5ab5e9619e0</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>SLA solution warning 75%</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysevent_email_action_8eea444bdbd4c30028f3d5ab5e9619e0</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-09 18:48:24</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

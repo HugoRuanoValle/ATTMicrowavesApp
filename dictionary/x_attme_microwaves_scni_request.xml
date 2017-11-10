@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="CNI request" max_length="40" name="x_attme_microwaves_scni_request" sizeclass="10" type="collection">
+        <element choice="1" label="Close code" max_length="40" name="close_code" type="choice">
+            <choice>
+                <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>
+                <element label="Work completed with issues" sequence="1" value="Work completed with issues"/>
+            </choice>
+        </element>
+        <element label="CNI release date" max_length="40" name="cni_release_date" type="glide_date"/>
+        <element label="Point A" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Work order request" max_length="32" name="work_order_request" read_only="true" reference="x_attme_microwaves_work_order_request" type="reference"/>
+    </element>
+</database>

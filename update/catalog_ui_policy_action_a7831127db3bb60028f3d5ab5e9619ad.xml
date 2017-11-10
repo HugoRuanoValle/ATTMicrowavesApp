@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item/>
+        <catalog_variable>IO:682399e3db3bb60028f3d5ab5e96190f</catalog_variable>
+        <disabled>true</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-12 19:02:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a7831127db3bb60028f3d5ab5e9619ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>requested_for</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_a7831127db3bb60028f3d5ab5e9619ad</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-07-12 19:02:04</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Basis info - Read only fields">5763dde3db3bb60028f3d5ab5e9619cf</ui_policy>
+        <variable>requested_for</variable>
+        <variable_set display_value="WM Basic info">14035de3db3bb60028f3d5ab5e9619ae</variable_set>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+</record_update>

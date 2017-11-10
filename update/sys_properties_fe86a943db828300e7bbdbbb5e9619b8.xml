@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>La presente propiedad es utlizada en la carga de actualizaciones de Work order request por medio del upload del archivo entregable. Si hay modificaciones en un registro del entregable el sys id de la WOR relacionada con el enlace es cargado en esta propiedad.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_attme_microwaves.WORSysIDWithDesignChange</name>
+        <read_roles/>
+        <suffix>WORSysIDWithDesignChange</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-10-31 03:30:39</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>fe86a943db828300e7bbdbbb5e9619b8</sys_id>
+        <sys_mod_count>78</sys_mod_count>
+        <sys_name>x_attme_microwaves.WORSysIDWithDesignChange</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_properties_fe86a943db828300e7bbdbbb5e9619b8</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2017-11-01 05:18:09</sys_updated_on>
+        <type>string</type>
+        <value/>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=fe86a943db828300e7bbdbbb5e9619b8"/>
+</record_update>

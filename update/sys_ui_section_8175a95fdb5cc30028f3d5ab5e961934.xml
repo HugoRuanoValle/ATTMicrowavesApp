@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Historic information" section_id="8175a95fdb5cc30028f3d5ab5e961934" sys_domain="global" table="x_attme_microwaves_candidate_validation_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>supplier_assignment_date</element>
+            <position>0</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>a573f6f1db81430028f3d5ab5e961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>point_a_visit_date</element>
+            <position>1</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2973f6f1db81430028f3d5ab5e961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>point_b_access_request_date</element>
+            <position>2</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>a973f6f1db81430028f3d5ab5e961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>points_b_access_granted_date</element>
+            <position>3</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2d73f6f1db81430028f3d5ab5e961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>points_b_validated_date</element>
+            <position>4</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>ad73f6f1db81430028f3d5ab5e961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>documentation_deliverd_by_supplier_date</element>
+            <position>5</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2173f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>a173f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>collo_ap_approval_request_date</element>
+            <position>7</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2573f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pa_status</element>
+            <position>8</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>a573f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pb_status</element>
+            <position>9</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2973f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>collo_ap_approval_granted_date</element>
+            <position>10</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>a973f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>trr_documentation_sended_to_sac_date</element>
+            <position>11</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>2d73f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>validation_process_comments</element>
+            <position>12</position>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-07 18:50:04</sys_created_on>
+            <sys_id>ad73f6f1db81430028f3d5ab5e961951</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Historic information" display_value="Historic information" name="x_attme_microwaves_candidate_validation_request" sys_domain="global" view="Default view">8175a95fdb5cc30028f3d5ab5e961934</sys_ui_section>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-07 18:50:04</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Historic information</caption>
+            <header>false</header>
+            <name>x_attme_microwaves_candidate_validation_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-05 22:13:03</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8175a95fdb5cc30028f3d5ab5e961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Historic information</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_ui_section_8175a95fdb5cc30028f3d5ab5e961934</sys_update_name>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-05 22:13:03</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

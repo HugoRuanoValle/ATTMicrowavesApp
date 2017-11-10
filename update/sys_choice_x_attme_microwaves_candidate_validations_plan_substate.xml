@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="substate" table="x_attme_microwaves_candidate_validations_plan" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Points A visited</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>0</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c30307dfdb200b00e7bbdbbb5e9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Points A visited</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Points B access requested</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>1</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>830307dfdb200b00e7bbdbbb5e9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Points B access requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Points B access granted</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>2</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cf0307dfdb200b00e7bbdbbb5e9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Points B access granted</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Points B validated</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>3</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0f0307dfdb200b00e7bbdbbb5e9619ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Points B validated</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Documentation delivered by supplier</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>4</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4b0307dfdb200b00e7bbdbbb5e9619cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Documentation delivered by supplier</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Collo Ap approval requested</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>5</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>870307dfdb200b00e7bbdbbb5e9619cc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Collo Ap approval requested</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Collo Ap approval granted</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>6</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c30307dfdb200b00e7bbdbbb5e9619cd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>Collo Ap approval granted</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>substate</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TRR documentation delivered</label>
+            <language>en</language>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sequence>7</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>030307dfdb200b00e7bbdbbb5e9619ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-08-18 15:17:40</sys_updated_on>
+            <value>TRR documentation delivered</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>substate</element>
+            <name>x_attme_microwaves_candidate_validations_plan</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-08-18 15:17:40</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>cf0307dfdb200b00e7bbdbbb5e9619c8</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>substate</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_candidate_validations_plan_substate</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-10 00:00:31</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

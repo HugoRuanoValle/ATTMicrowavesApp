@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW Sites import (FX info)" max_length="40" name="x_attme_microwaves_sites_import__fx_info_" type="collection">
+        <element attributes="import_attribute_name=FIBER/MW,edge_encryption_enabled=true" label="FIBER/MW" max_length="40" name="u_fiber_mw" type="string"/>
+        <element attributes="import_attribute_name=HUB/SITE,edge_encryption_enabled=true" label="HUB/SITE" max_length="40" name="u_hub_site" type="string"/>
+        <element attributes="import_attribute_name=MW REPEATER,edge_encryption_enabled=true" label="MW REPEATER" max_length="40" name="u_mw_repeater" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA DIAMETER 1,edge_encryption_enabled=true" label="REMOTE ANTENNA DIAMETER 1" max_length="40" name="u_remote_antenna_diameter_1" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA DIAMETER 2,edge_encryption_enabled=true" label="REMOTE ANTENNA DIAMETER 2" max_length="40" name="u_remote_antenna_diameter_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA DIAMETER 3,edge_encryption_enabled=true" label="REMOTE ANTENNA DIAMETER 3" max_length="40" name="u_remote_antenna_diameter_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA DIAMETER 4,edge_encryption_enabled=true" label="REMOTE ANTENNA DIAMETER 4" max_length="40" name="u_remote_antenna_diameter_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA DIAMETER 5,edge_encryption_enabled=true" label="REMOTE ANTENNA DIAMETER 5" max_length="40" name="u_remote_antenna_diameter_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA HEIGHT 1" label="REMOTE ANTENNA HEIGHT 1" max_length="40" name="u_remote_antenna_height_1" type="integer"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA HEIGHT 2,edge_encryption_enabled=true" label="REMOTE ANTENNA HEIGHT 2" max_length="40" name="u_remote_antenna_height_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA HEIGHT 3,edge_encryption_enabled=true" label="REMOTE ANTENNA HEIGHT 3" max_length="40" name="u_remote_antenna_height_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA HEIGHT 4,edge_encryption_enabled=true" label="REMOTE ANTENNA HEIGHT 4" max_length="40" name="u_remote_antenna_height_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA HEIGHT 5,edge_encryption_enabled=true" label="REMOTE ANTENNA HEIGHT 5" max_length="40" name="u_remote_antenna_height_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA MODEL 1,edge_encryption_enabled=true" label="REMOTE ANTENNA MODEL 1" max_length="40" name="u_remote_antenna_model_1" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA MODEL 2,edge_encryption_enabled=true" label="REMOTE ANTENNA MODEL 2" max_length="40" name="u_remote_antenna_model_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA MODEL 3,edge_encryption_enabled=true" label="REMOTE ANTENNA MODEL 3" max_length="40" name="u_remote_antenna_model_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA MODEL 4,edge_encryption_enabled=true" label="REMOTE ANTENNA MODEL 4" max_length="40" name="u_remote_antenna_model_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE ANTENNA MODEL 5,edge_encryption_enabled=true" label="REMOTE ANTENNA MODEL 5" max_length="40" name="u_remote_antenna_model_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE AZIMUTH 1" label="REMOTE AZIMUTH 1" max_length="15" name="u_remote_azimuth_1" type="decimal"/>
+        <element attributes="import_attribute_name=REMOTE AZIMUTH 2,edge_encryption_enabled=true" label="REMOTE AZIMUTH 2" max_length="40" name="u_remote_azimuth_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE AZIMUTH 3,edge_encryption_enabled=true" label="REMOTE AZIMUTH 3" max_length="40" name="u_remote_azimuth_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE AZIMUTH 4,edge_encryption_enabled=true" label="REMOTE AZIMUTH 4" max_length="40" name="u_remote_azimuth_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE AZIMUTH 5,edge_encryption_enabled=true" label="REMOTE AZIMUTH 5" max_length="40" name="u_remote_azimuth_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE PATH LENGTH 1,edge_encryption_enabled=true" label="REMOTE PATH LENGTH 1" max_length="40" name="u_remote_path_length_1" type="string"/>
+        <element attributes="import_attribute_name=REMOTE PATH LENGTH 2,edge_encryption_enabled=true" label="REMOTE PATH LENGTH 2" max_length="40" name="u_remote_path_length_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE PATH LENGTH 3,edge_encryption_enabled=true" label="REMOTE PATH LENGTH 3" max_length="40" name="u_remote_path_length_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE PATH LENGTH 4,edge_encryption_enabled=true" label="REMOTE PATH LENGTH 4" max_length="40" name="u_remote_path_length_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE PATH LENGTH 5,edge_encryption_enabled=true" label="REMOTE PATH LENGTH 5" max_length="40" name="u_remote_path_length_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE ID 1,edge_encryption_enabled=true" label="REMOTE SITE ID 1" max_length="40" name="u_remote_site_id_1" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE ID 2,edge_encryption_enabled=true" label="REMOTE SITE ID 2" max_length="40" name="u_remote_site_id_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE ID 3,edge_encryption_enabled=true" label="REMOTE SITE ID 3" max_length="40" name="u_remote_site_id_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE ID 4,edge_encryption_enabled=true" label="REMOTE SITE ID 4" max_length="40" name="u_remote_site_id_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE ID 5,edge_encryption_enabled=true" label="REMOTE SITE ID 5" max_length="40" name="u_remote_site_id_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LATITUDE 1" label="REMOTE SITE LATITUDE 1" max_length="40" name="u_remote_site_latitude_1" type="float"/>
+        <element attributes="import_attribute_name=REMOTE SITE LATITUDE 2,edge_encryption_enabled=true" label="REMOTE SITE LATITUDE 2" max_length="40" name="u_remote_site_latitude_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LATITUDE 3,edge_encryption_enabled=true" label="REMOTE SITE LATITUDE 3" max_length="40" name="u_remote_site_latitude_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LATITUDE 4,edge_encryption_enabled=true" label="REMOTE SITE LATITUDE 4" max_length="40" name="u_remote_site_latitude_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LATITUDE 5,edge_encryption_enabled=true" label="REMOTE SITE LATITUDE 5" max_length="40" name="u_remote_site_latitude_5" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LONGITUDE 1" label="REMOTE SITE LONGITUDE 1" max_length="40" name="u_remote_site_longitude_1" type="float"/>
+        <element attributes="import_attribute_name=REMOTE SITE LONGITUDE 2,edge_encryption_enabled=true" label="REMOTE SITE LONGITUDE 2" max_length="40" name="u_remote_site_longitude_2" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LONGITUDE 3,edge_encryption_enabled=true" label="REMOTE SITE LONGITUDE 3" max_length="40" name="u_remote_site_longitude_3" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LONGITUDE 4,edge_encryption_enabled=true" label="REMOTE SITE LONGITUDE 4" max_length="40" name="u_remote_site_longitude_4" type="string"/>
+        <element attributes="import_attribute_name=REMOTE SITE LONGITUDE 5,edge_encryption_enabled=true" label="REMOTE SITE LONGITUDE 5" max_length="40" name="u_remote_site_longitude_5" type="string"/>
+        <element attributes="import_attribute_name=SITE ANTENNA DIAMETER" label="SITE ANTENNA DIAMETER" max_length="15" name="u_site_antenna_diameter" type="decimal"/>
+        <element attributes="import_attribute_name=SITE ANTENNA HEIGHT" label="SITE ANTENNA HEIGHT" max_length="40" name="u_site_antenna_height" type="integer"/>
+        <element attributes="import_attribute_name=SITE ANTENNA MODEL,edge_encryption_enabled=true" label="SITE ANTENNA MODEL" max_length="40" name="u_site_antenna_model" type="string"/>
+        <element attributes="import_attribute_name=SITE AZIMUTH" label="SITE AZIMUTH" max_length="15" name="u_site_azimuth" type="decimal"/>
+        <element attributes="import_attribute_name=SITE FREQUENCY,edge_encryption_enabled=true" label="SITE FREQUENCY" max_length="40" name="u_site_frequency" type="string"/>
+        <element attributes="import_attribute_name=SITE LATITUDE,edge_encryption_enabled=true" label="SITE LATITUDE" max_length="40" name="u_site_latitude" type="string"/>
+        <element attributes="import_attribute_name=SITE LONGITUDE,edge_encryption_enabled=true" label="SITE LONGITUDE" max_length="40" name="u_site_longitude" type="string"/>
+        <element attributes="import_attribute_name=SITE NAME,edge_encryption_enabled=true" label="SITE NAME" max_length="40" name="u_site_name" type="string"/>
+        <element attributes="import_attribute_name=SITE PATH LENGTH" label="SITE PATH LENGTH" max_length="15" name="u_site_path_length" type="decimal"/>
+    </element>
+</database>

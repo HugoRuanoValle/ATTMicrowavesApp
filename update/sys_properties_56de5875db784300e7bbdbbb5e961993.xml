@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Sys_id of the schedule that represents 24x7 schedule</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_attme_microwaves.Microwaves24/7Schedule</name>
+        <read_roles/>
+        <suffix>Microwaves24/7Schedule</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-25 21:45:04</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>56de5875db784300e7bbdbbb5e961993</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_attme_microwaves.Microwaves24/7Schedule</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_properties_56de5875db784300e7bbdbbb5e961993</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-25 21:45:26</sys_updated_on>
+        <type>string</type>
+        <value>dd7c5075db784300e7bbdbbb5e9619a9</value>
+        <write_roles>admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=56de5875db784300e7bbdbbb5e961993"/>
+</record_update>

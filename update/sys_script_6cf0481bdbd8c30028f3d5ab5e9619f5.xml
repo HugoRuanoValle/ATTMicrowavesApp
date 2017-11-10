@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_attme_microwaves_search_ring_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_attme_microwaves_search_ring_request">stateIN12,13,2,9,6^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="12,13,2,9,6"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>SRR Sites automatic creation (FX info)</name>
+        <order>1100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+//este script action ejecuta la carga de sitios al momento de agregar un adjunto para una nueva solicitud de aro de busqueda ya sea para sitio nuevo o para evento especial, se considera la pestaña FX INFO del archivo entregado al momento de cerrar una solicitud. Dado que esto es solo el cierre solicitudes la carga del archivo se espera que se haga en los primeros estados (accepted, assigned, work in progress, on hold y closed)
+
+//declaramos variables y constantes
+var mw_req_table = 'x_attme_microwaves_search_ring_request'; //microwaves request table
+var mw_req_sysid = current.sys_id; //sys_id of the record
+var datasource_table = 'sys_data_source';
+	
+//obtenemos los sys_id que se encuentran en las propiedades (data source y scheduled import) existen en la pestaña FX info contenida en el Excel adjunto
+var datasource_sysid_2 = gs.getProperty('x_attme_microwaves.DataSource(FXInfo)');
+var scheduled_import_sysid_2 = gs.getProperty('x_attme_microwaves.ScheduledImport(FXInfo)');
+	
+//Primeramente revisamos que para el registro exista un archivo adjunto.
+var attachment = new GlideRecord('sys_attachment');
+attachment.addQuery('table_name', 'x_attme_microwaves_search_ring_request');
+attachment.addQuery('table_sys_id', current.sys_id);
+attachment.setLimit(1);
+attachment.query(); 
+attachment.next();
+	
+//si existe al menos un registro de adjunto en la solicitud actual
+if(attachment.getRowCount() > 0)
+{
+	//revisamos que el attachment tenga la extensión correcta (XLS o XLSX)
+    if((attachment.file_name.indexOf('.xlsx') > -1) || (attachment.file_name.indexOf('.xls') > -1) )
+	{	
+	    //cambiamos el contenido de la propiedad "x_attme_microwaves.SitesParentRequestID"
+	    global.setPropertyScopedApp('x_attme_microwaves.SitesParentRequestID', mw_req_sysid);
+		
+	    //retiramos los adjuntos del Data source (FX info)
+        global.deleteAttachmentScopedApp(datasource_table, datasource_sysid_2);			
+			
+        //cargamos en el Data source (FX info) el archivo adjunto
+        global.copyAttachmentsScopedApp(mw_req_table, mw_req_sysid, datasource_table, datasource_sysid_2);
+			
+	    //hacemos el execute para ambos schedule import (FX info)
+	    global.executeScopedAppScheduledImport(scheduled_import_sysid_2);
+		
+		//agregamos un comentario de que se procesa el archivo en su pestaña "FX" y que se actualizaron los sitios
+		current.comments = 'Attachment "' + attachment.file_name + '" loaded, information in \"FX\" sheet was processed.';
+		gs.addInfoMessage("Attachment processed, sites records will be updated");
+				
+		//borramos los adjuntos del registro de MW request
+	    global.deleteAttachmentScopedApp(mw_req_table, mw_req_sysid);	
+	}
+	
+	//si el adjunto posee una extensión que no sea XLS o XLSX
+	if((attachment.file_name.indexOf('.xlsx') == -1) || (attachment.file_name.indexOf('.xls') == -1) )
+	{
+		gs.addErrorMessage("The attachment file has a extension that it's not possible to process. Please only attach XLS or XLSX files.");
+		
+	    //borramos los adjuntos del registro de MW request
+	    global.deleteAttachmentScopedApp(mw_req_table, mw_req_sysid);
+	}
+}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-05 14:56:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6cf0481bdbd8c30028f3d5ab5e9619f5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>SRR Sites automatic creation (FX info)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_6cf0481bdbd8c30028f3d5ab5e9619f5</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-24 19:02:19</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6cf0481bdbd8c30028f3d5ab5e9619f5"/>
+</record_update>

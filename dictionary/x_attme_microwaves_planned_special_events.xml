@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Special events" max_length="40" name="x_attme_microwaves_planned_special_events" type="collection">
+        <element label="Begin date" mandatory="true" max_length="40" name="begin_date" type="glide_date"/>
+        <element label="End date" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
+        <element display="true" label="Event name" mandatory="true" max_length="100" name="event_name" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Opened" max_length="40" name="opened_at" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
+        <element default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Opened by" max_length="32" name="opened_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Planned" max_length="40" name="planned" read_only="true" type="boolean"/>
+        <element label="Special events plan" max_length="32" name="special_events_plan" read_only="true" reference="x_attme_microwaves_special_events_plan" reference_floats="true" type="reference"/>
+        <index name="index">
+            <element name="special_events_plan"/>
+        </index>
+        <index name="index2">
+            <element name="opened_by"/>
+        </index>
+        <index name="index3">
+            <element name="event_name"/>
+            <element name="end_date"/>
+            <element name="begin_date"/>
+        </index>
+    </element>
+</database>

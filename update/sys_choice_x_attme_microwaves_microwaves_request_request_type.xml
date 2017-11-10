@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="request_type" table="x_attme_microwaves_microwaves_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>request_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Search ring  request</label>
+            <language>en</language>
+            <name>x_attme_microwaves_microwaves_request</name>
+            <sequence>100</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-10 19:46:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>687a0f7edb7f760028f3d5ab5e9619e1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-10 19:46:16</sys_updated_on>
+            <value>Search ring  request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Network optimization request</label>
+            <language>en</language>
+            <name>x_attme_microwaves_microwaves_request</name>
+            <sequence>200</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-10 19:53:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>27fb0bbedb7f760028f3d5ab5e96199a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-10 19:53:00</sys_updated_on>
+            <value>Network optimization request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Validation caravan request</label>
+            <language>en</language>
+            <name>x_attme_microwaves_microwaves_request</name>
+            <sequence>300</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-10 19:53:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>151c47bedb7f760028f3d5ab5e961982</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-10 19:53:18</sys_updated_on>
+            <value>Validation caravan request</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>request_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Work order</label>
+            <language>en</language>
+            <name>x_attme_microwaves_microwaves_request</name>
+            <sequence>400</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-10 19:53:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2d2c43bedb7f760028f3d5ab5e96191b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-10 19:53:32</sys_updated_on>
+            <value>Work order</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>request_type</element>
+            <name>x_attme_microwaves_microwaves_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-10 19:46:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>198a83f6db7f760028f3d5ab5e961975</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_name>request_type</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_microwaves_request_request_type</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-09 23:59:52</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_wizard">
+    <sys_wizard action="INSERT_OR_UPDATE">
+        <back_panel/>
+        <intercepts/>
+        <name>MW search ring</name>
+        <next_panel/>
+        <question>Please select an option</question>
+        <sys_class_name>sys_wizard</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-24 15:55:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d1cbde5bdb088b0028f3d5ab5e961955</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MW search ring</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_wizard_d1cbde5bdb088b0028f3d5ab5e961955</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-17 19:47:08</sys_updated_on>
+    </sys_wizard>
+</record_update>

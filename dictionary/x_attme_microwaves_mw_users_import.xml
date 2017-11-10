@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW Users import" max_length="40" name="x_attme_microwaves_mw_users_import" type="collection">
+        <element attributes="import_attribute_name=Apellidos,edge_encryption_enabled=true" label="Apellidos" max_length="40" name="u_apellidos" type="string"/>
+        <element attributes="import_attribute_name=Area,edge_encryption_enabled=true" label="Area" max_length="40" name="u_area" type="string"/>
+        <element attributes="import_attribute_name=Correo,edge_encryption_enabled=true" label="Correo" max_length="40" name="u_correo" type="string"/>
+        <element attributes="import_attribute_name=ID,edge_encryption_enabled=true" label="ID" max_length="40" name="u_id" type="string"/>
+        <element attributes="import_attribute_name=Nombre,edge_encryption_enabled=true" label="Nombre" max_length="40" name="u_nombre" type="string"/>
+        <element attributes="import_attribute_name=Numero de empleado,edge_encryption_enabled=true" label="Numero de empleado" max_length="40" name="u_numero_de_empleado" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="MW CVR import">53d259f8db50430028f3d5ab5e96197e</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+//el presente transform script pretende determinar si existe en el archivo EXCEL que se carga en la programación de validación tiene candidatos algun registro que no cumpla la regla de que para que se cree una "candidates validation request" tiene que ser con 48 horas de anticipación. Además de no cargarse los registros se define el estado del plan como "rechazado"
+	
+//primeramente obtenemos los registros de fecha/hora de la tabla "x_attme_microwaves_mw_candidates_validation_requests_import" relacionados con el import_set que se está transformando
+	
+var candidates_validation_plan = gs.getProperty('x_attme_microwaves.CVRValidationPlanID');
+var import_set_id =  import_set.sys_id;
+var import_table_name = 'x_attme_microwaves_mw_cvr_import';
+	
+var pre_source = new GlideRecord(import_table_name);
+pre_source.addQuery('sys_import_set', import_set_id);
+pre_source.query();
+
+while(pre_source.next())
+{
+	var source_visit_date = pre_source.u_dia;
+	var source_visit_hour = pre_source.u_hora_de_visita;
+			
+	var source_visit_hour_split = source_visit_hour.split(" ");
+	var visit_hour = source_visit_hour_split[1];
+	
+	var gt = new GlideTime(); 
+    gt.setValue(visit_hour);
+    gt.getByFormat("HH:mm");
+	
+	var visit_date_time = source_visit_date + " " + gt.getDisplayValue();
+	
+	
+	var opened_at = new GlideDateTime(); 
+	var requested_for_date = new GlideDateTime(visit_date_time);
+	var sched_sysid = gs.getProperty('x_attme_microwaves.MicrowavesWorkingDays24HoursSchedule');
+	
+	var sched = new GlideSchedule(sched_sysid, 'Mexico/General');
+    var duration = sched.duration(opened_at, requested_for_date);
+	var duration_value = duration.getDurationValue();
+	var duration_str = duration_value.toString();
+	
+//seccionamos el valor de la duración
+	var days;
+	var hours;
+	var minutes;
+	var seconds;
+	
+    if(duration_str.indexOf(" ") > -1) //se determina si existen días en la duración, si hay espacios entonces es una duración con días
+		{
+			
+			var split_1 = duration_str.split (" "); //dividimos la cadena considerando el espacio
+	        days = parseInt(split_1[0]);
+						
+			var split_2 = split_1[1].split(":"); //dividimos la cadena considerando los dos puntos
+			hours = parseInt(split_2[0]);
+			minutes = parseInt(split_2[1]);
+			seconds = parseInt(split_2[2]);
+			
+		}
+	
+	else
+		{
+			var split_3 = duration_str.split(":"); //dividimos la cadena considerando los dos puntos
+			days = '0';
+						
+			hours = parseInt(split_3[0]);
+			minutes = parseInt(split_3[1]);
+			seconds = parseInt(split_3[2]);
+			
+		}
+	
+	var total_hours = (24*days) + hours + 6; // se corrige el desfase de 6 horas 
+	gs.info("Total hours: " + total_hours);
+
+	
+	
+	//con un solo registro que no cumpla la regla de las 48 horas se cancela toda carga, se detenie toda la transformación
+	
+	if(total_hours < 48)
+	{
+	    ignore = true;
+		
+		gs.info("ERROR: el CVR " + pre_source.u_site_id +" se solicita en " + total_hours + " horas, se cancela toda la carga del archivo.");	
+		
+		var plan = new GlideRecord('x_attme_microwaves_candidate_validations_plan');
+		plan.addQuery('sys_id', candidates_validation_plan);
+		plan.query();
+		
+		if(plan.next())
+		{
+			plan.state = 11; //se define el estado del plan como rechazado
+			
+			gs.addInfoMessage("ERROR: candidates validation for site " + pre_source.u_site_id +" is requested in the next " + total_hours + " hours, attachmment processing is cancelled.");
+			
+			plan.comments = "ERROR: candidates validation for site " + pre_source.u_site_id +" is requested in the next " + total_hours + " hours, attachmment processing is cancelled.";
+			plan.update();
+		
+		}
+				
+	}
+ 	
+
+} 
+	
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-07 19:01:06</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a89c433bdb540700e7bbdbbb5e961927</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_transform_script_a89c433bdb540700e7bbdbbb5e961927</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-29 22:55:10</sys_updated_on>
+        <when>onStart</when>
+    </sys_transform_script>
+</record_update>

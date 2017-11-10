@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_cal_day">
+    <sys_cal_day action="INSERT_OR_UPDATE">
+        <day_of_week>3</day_of_week>
+        <end_time1>1970-01-02 00:00:00</end_time1>
+        <end_time2/>
+        <parent_id display_value="AT&amp;T - Microwaves area calendar">b5bf1da4dbe0470028f3d5ab5e9619bf</parent_id>
+        <start_time1>1970-01-01 15:00:00</start_time1>
+        <start_time2/>
+        <sys_class_name>sys_cal_day</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-09 19:01:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>34ef1da4dbe0470028f3d5ab5e9619c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_cal_day_34ef1da4dbe0470028f3d5ab5e9619c2</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-09 19:01:09</sys_updated_on>
+    </sys_cal_day>
+</record_update>

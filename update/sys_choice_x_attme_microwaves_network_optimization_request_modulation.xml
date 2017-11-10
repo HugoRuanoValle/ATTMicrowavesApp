@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="modulation" table="x_attme_microwaves_network_optimization_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>10</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:26:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c5c60b83dbcd4300e7bbdbbb5e961958</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:27:17</sys_updated_on>
+            <value>16 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>20</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:27:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6bc68b43dbcd4300e7bbdbbb5e96195d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:27:14</sys_updated_on>
+            <value>32 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>30</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:27:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fdd6c383dbcd4300e7bbdbbb5e961954</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:27:29</sys_updated_on>
+            <value>64 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>128 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>40</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:27:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65e6c383dbcd4300e7bbdbbb5e961900</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:27:40</sys_updated_on>
+            <value>128 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>256 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>50</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:27:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9cf60783dbcd4300e7bbdbbb5e961943</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:27:55</sys_updated_on>
+            <value>256 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>512 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>60</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:28:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>77f60b83dbcd4300e7bbdbbb5e96195d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:28:08</sys_updated_on>
+            <value>512 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1024 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>70</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:28:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>72070b83dbcd4300e7bbdbbb5e9619ae</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:28:21</sys_updated_on>
+            <value>1024 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2048 QAM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>80</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:28:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f5170b83dbcd4300e7bbdbbb5e96191d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:28:35</sys_updated_on>
+            <value>2048 QAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 32QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>90</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:28:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a1270783dbcd4300e7bbdbbb5e961945</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:28:47</sys_updated_on>
+            <value>16QAM - 32QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 64QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>100</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:28:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>49370b83dbcd4300e7bbdbbb5e961984</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:29:00</sys_updated_on>
+            <value>16QAM - 64QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 128QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>110</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:29:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>af374b83dbcd4300e7bbdbbb5e961915</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:29:13</sys_updated_on>
+            <value>16QAM - 128QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 256QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>120</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:29:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be474b83dbcd4300e7bbdbbb5e961955</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:29:24</sys_updated_on>
+            <value>16QAM - 256QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 512QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>130</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:29:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ad57c383dbcd4300e7bbdbbb5e961904</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:29:34</sys_updated_on>
+            <value>16QAM - 512QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>16QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>140</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:29:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58670783dbcd4300e7bbdbbb5e961945</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:29:49</sys_updated_on>
+            <value>16QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 64QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>150</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:29:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37678b83dbcd4300e7bbdbbb5e961989</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:30:03</sys_updated_on>
+            <value>32QAM - 64QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 128QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>160</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:30:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b77cb83dbcd4300e7bbdbbb5e96190c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:30:13</sys_updated_on>
+            <value>32QAM - 128QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 256QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>170</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:30:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a987c383dbcd4300e7bbdbbb5e96195b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:30:28</sys_updated_on>
+            <value>32QAM - 256QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 512QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>180</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:30:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41974783dbcd4300e7bbdbbb5e9619a5</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:30:36</sys_updated_on>
+            <value>32QAM - 512QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>190</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:30:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>db97cb83dbcd4300e7bbdbbb5e96199b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:30:48</sys_updated_on>
+            <value>32QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>32QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>200</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:30:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>75a78b83dbcd4300e7bbdbbb5e9619b7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:31:03</sys_updated_on>
+            <value>32QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64QAM - 128QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>210</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:31:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65b70f83dbcd4300e7bbdbbb5e961984</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:31:13</sys_updated_on>
+            <value>64QAM - 128QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64QAM - 256QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>220</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d4c74f83dbcd4300e7bbdbbb5e96192a</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:31:33</sys_updated_on>
+            <value>64QAM - 256QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64QAM - 512QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>230</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:31:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>77c74783dbcd4300e7bbdbbb5e9619a6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:31:47</sys_updated_on>
+            <value>64QAM - 512QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>240</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:31:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58e74f83dbcd4300e7bbdbbb5e961949</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:32:01</sys_updated_on>
+            <value>64QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>64QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>250</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:32:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76e7cb83dbcd4300e7bbdbbb5e96199d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:32:12</sys_updated_on>
+            <value>64QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>128QAM - 256QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>260</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:32:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76f7c383dbcd4300e7bbdbbb5e96195d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:32:24</sys_updated_on>
+            <value>128QAM - 256QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>128QAM - 512QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>270</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:32:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65088f83dbcd4300e7bbdbbb5e9619ce</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:32:35</sys_updated_on>
+            <value>128QAM - 512QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>128QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>280</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:32:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d4188f83dbcd4300e7bbdbbb5e961941</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:32:47</sys_updated_on>
+            <value>128QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>128QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>290</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:32:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>32188f83dbcd4300e7bbdbbb5e96198a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:33:00</sys_updated_on>
+            <value>128QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>256QAM - 512QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>300</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:33:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ca280f83dbcd4300e7bbdbbb5e96198b</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:33:30</sys_updated_on>
+            <value>256QAM - 512QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>256QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>310</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:33:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d548cf83dbcd4300e7bbdbbb5e961921</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:33:45</sys_updated_on>
+            <value>256QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>256QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>320</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:33:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d958cf83dbcd4300e7bbdbbb5e96191c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:34:02</sys_updated_on>
+            <value>256QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>512QAM - 1024QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>330</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:34:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6d684f83dbcd4300e7bbdbbb5e961967</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:34:11</sys_updated_on>
+            <value>512QAM - 1024QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>512QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>340</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:34:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bb68cf83dbcd4300e7bbdbbb5e961922</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:34:23</sys_updated_on>
+            <value>512QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>modulation</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1024QAM - 2048QAM_AM</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence>350</sequence>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:34:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>da7843c3dbcd4300e7bbdbbb5e961907</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-11 17:34:39</sys_updated_on>
+            <value>1024QAM - 2048QAM_AM</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>modulation</element>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-11 17:26:57</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>bac60b83dbcd4300e7bbdbbb5e96196c</sys_id>
+            <sys_mod_count>107</sys_mod_count>
+            <sys_name>modulation</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_network_optimization_request_modulation</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-10 00:00:28</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

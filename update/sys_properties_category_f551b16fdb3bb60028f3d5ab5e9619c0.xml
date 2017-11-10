@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>MW Properties</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-12 21:12:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f551b16fdb3bb60028f3d5ab5e9619c0</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>MW Properties</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_properties_category_f551b16fdb3bb60028f3d5ab5e9619c0</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-07-12 21:20:27</sys_updated_on>
+        <title><![CDATA[<p><font size="6"><strong>System properties for the Microwaves Scoped Application</strong></font></p>
+<p> </p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=f551b16fdb3bb60028f3d5ab5e9619c0"/>
+</record_update>

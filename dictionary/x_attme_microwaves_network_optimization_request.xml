@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Network optimization request" max_length="40" name="x_attme_microwaves_network_optimization_request" sizeclass="4" text_index="true" type="collection">
+        <element label="Affected service" max_length="40" name="affected_service" type="boolean"/>
+        <element choice="1" label="Bandwith" mandatory="true" max_length="40" name="bandwith" type="choice">
+            <choice>
+                <element label="3.5 MHZ" sequence="5" value="3.5 MHZ"/>
+                <element label="7 MHZ" sequence="7" value="7 MHZ"/>
+                <element label="14 MHZ" sequence="10" value="14 MHZ"/>
+                <element label="28 MHZ" sequence="20" value="28 MHZ"/>
+                <element label="56 MHZ" sequence="30" value="56 MHZ"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Brand" mandatory="true" max_length="60" name="brand" type="choice">
+            <choice>
+                <element label="Ceragon" value="Ceragon"/>
+                <element label="Ericsson" value="Ericsson"/>
+                <element label="Huawei" value="Huawei"/>
+                <element label="NEC" value="NEC"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Capacity (Mbps)" mandatory="true" max_length="40" name="capacity" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Close code" max_length="40" name="close_code" type="string">
+            <choice>
+                <element label="Cambio de trayectoria" sequence="0" value="Cambio de trayectoria"/>
+                <element label="Solución de optimización" sequence="1" value="Solución de optimización"/>
+                <element label="Solución operativa" sequence="2" value="Solución operativa"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Configuration" mandatory="true" max_length="40" name="configuration" type="choice">
+            <choice>
+                <element label="HSB" sequence="0" value="HSB"/>
+                <element label="SD" sequence="1" value="SD"/>
+                <element label="FD" sequence="2" value="FD"/>
+                <element label="MIMO" sequence="3" value="MIMO"/>
+                <element label="XPIC" sequence="4" value="XPIC"/>
+                <element label="XPIC SD" sequence="5" value="XPIC SD"/>
+            </choice>
+        </element>
+        <element choice="1" label="Frequency" mandatory="true" max_length="40" name="frequency" type="choice">
+            <choice>
+                <element label="7 GHz" sequence="10" value="7 GHz"/>
+                <element label="10.5 GHz" sequence="20" value="10.5 GHz"/>
+                <element label="15 GHz" sequence="30" value="15 GHz"/>
+                <element label="23 GHz" sequence="40" value="23 GHz"/>
+                <element label="38 GHz" sequence="50" value="38 GHz"/>
+            </choice>
+        </element>
+        <element label="Location municipality" mandatory="true" max_length="200" name="location_municipality" read_only="true" type="string"/>
+        <element label="Location region" mandatory="true" max_length="10" name="location_region" read_only="true" type="string"/>
+        <element label="Location state" mandatory="true" max_length="100" name="location_state" read_only="true" type="string"/>
+        <element label="Managed link" max_length="40" name="managed_link" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Modulation" mandatory="true" max_length="40" name="modulation" type="choice">
+            <choice>
+                <element label="16 QAM" sequence="10" value="16 QAM"/>
+                <element label="32 QAM" sequence="20" value="32 QAM"/>
+                <element label="64 QAM" sequence="30" value="64 QAM"/>
+                <element label="128 QAM" sequence="40" value="128 QAM"/>
+                <element label="256 QAM" sequence="50" value="256 QAM"/>
+                <element label="512 QAM" sequence="60" value="512 QAM"/>
+                <element label="1024 QAM" sequence="70" value="1024 QAM"/>
+                <element label="2048 QAM" sequence="80" value="2048 QAM"/>
+                <element label="16QAM - 32QAM_AM" sequence="90" value="16QAM - 32QAM_AM"/>
+                <element label="16QAM - 64QAM_AM" sequence="100" value="16QAM - 64QAM_AM"/>
+                <element label="16QAM - 128QAM_AM" sequence="110" value="16QAM - 128QAM_AM"/>
+                <element label="16QAM - 256QAM_AM" sequence="120" value="16QAM - 256QAM_AM"/>
+                <element label="16QAM - 512QAM_AM" sequence="130" value="16QAM - 512QAM_AM"/>
+                <element label="16QAM - 1024QAM_AM" sequence="140" value="16QAM - 1024QAM_AM"/>
+                <element label="32QAM - 64QAM_AM" sequence="150" value="32QAM - 64QAM_AM"/>
+                <element label="32QAM - 128QAM_AM" sequence="160" value="32QAM - 128QAM_AM"/>
+                <element label="32QAM - 256QAM_AM" sequence="170" value="32QAM - 256QAM_AM"/>
+                <element label="32QAM - 512QAM_AM" sequence="180" value="32QAM - 512QAM_AM"/>
+                <element label="32QAM - 1024QAM_AM" sequence="190" value="32QAM - 1024QAM_AM"/>
+                <element label="32QAM - 2048QAM_AM" sequence="200" value="32QAM - 2048QAM_AM"/>
+                <element label="64QAM - 128QAM_AM" sequence="210" value="64QAM - 128QAM_AM"/>
+                <element label="64QAM - 256QAM_AM" sequence="220" value="64QAM - 256QAM_AM"/>
+                <element label="64QAM - 512QAM_AM" sequence="230" value="64QAM - 512QAM_AM"/>
+                <element label="64QAM - 1024QAM_AM" sequence="240" value="64QAM - 1024QAM_AM"/>
+                <element label="64QAM - 2048QAM_AM" sequence="250" value="64QAM - 2048QAM_AM"/>
+                <element label="128QAM - 256QAM_AM" sequence="260" value="128QAM - 256QAM_AM"/>
+                <element label="128QAM - 512QAM_AM" sequence="270" value="128QAM - 512QAM_AM"/>
+                <element label="128QAM - 1024QAM_AM" sequence="280" value="128QAM - 1024QAM_AM"/>
+                <element label="128QAM - 2048QAM_AM" sequence="290" value="128QAM - 2048QAM_AM"/>
+                <element label="256QAM - 512QAM_AM" sequence="300" value="256QAM - 512QAM_AM"/>
+                <element label="256QAM - 1024QAM_AM" sequence="310" value="256QAM - 1024QAM_AM"/>
+                <element label="256QAM - 2048QAM_AM" sequence="320" value="256QAM - 2048QAM_AM"/>
+                <element label="512QAM - 1024QAM_AM" sequence="330" value="512QAM - 1024QAM_AM"/>
+                <element label="512QAM - 2048QAM_AM" sequence="340" value="512QAM - 2048QAM_AM"/>
+                <element label="1024QAM - 2048QAM_AM" sequence="350" value="1024QAM - 2048QAM_AM"/>
+            </choice>
+        </element>
+        <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Polarization" mandatory="true" max_length="40" name="polarization" type="choice">
+            <choice>
+                <element label="Horizontal" sequence="10" value="Horizontal"/>
+                <element label="Vertical" sequence="20" value="Vertical"/>
+                <element label="Horizontal / Vertical" sequence="30" value="Horizontal / Vertical"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Presented failure" mandatory="true" max_length="10000" name="problem_description" type="string"/>
+        <element choice="1" label="Protection" mandatory="true" max_length="40" name="protection" type="choice">
+            <choice>
+                <element label="1+0" value="1+0"/>
+                <element label="1+1" value="1+1"/>
+                <element label="2+0" value="2+0"/>
+                <element label="2+1" value="2+1"/>
+                <element label="2+2" value="2+2"/>
+                <element label="3+0" value="3+0"/>
+                <element label="3+1" value="3+1"/>
+                <element label="4+0" value="4+0"/>
+                <element label="4+1" value="4+1"/>
+                <element label="4+4" value="4+4"/>
+                <element label="4x4" value="4x4"/>
+                <element label="5+0" value="5+0"/>
+                <element label="5+1" value="5+1"/>
+                <element label="6+0" value="6+0"/>
+                <element label="6+1" value="6+1"/>
+                <element label="7+0" value="7+0"/>
+                <element label="7+1" value="7+1"/>
+                <element label="8+1" value="8+1"/>
+                <element label="9+1" value="9+1"/>
+            </choice>
+        </element>
+        <element label="Reception level (dBm)" mandatory="true" max_length="40" name="reception_level" type="float"/>
+        <element choice="1" label="Request type" mandatory="true" max_length="40" name="request_type" type="choice">
+            <choice>
+                <element label="Line of view obstruction problem" sequence="0" value="Line of view obtruction problem"/>
+                <element label="Network optimization problem" sequence="1" value="Network optimization problem"/>
+            </choice>
+        </element>
+        <element label="Transmission power (dBm)" mandatory="true" max_length="40" name="transmission_power" type="float"/>
+    </element>
+</database>

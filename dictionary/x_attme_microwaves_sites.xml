@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Sites" max_length="40" name="x_attme_microwaves_sites" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Additional comments" max_length="5000" name="additional_comments" type="string"/>
+        <element label="Azimuth  [°]" max_length="40" name="azimuth" read_only="true" type="float"/>
+        <element label="Azimuth PB" max_length="40" name="azimuth_pb" read_only="true" type="float"/>
+        <element label="Band (GHz)" max_length="40" name="band" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Candidate" max_length="40" name="candidate" read_only="true" type="string"/>
+        <element label="Candidates validation plan" max_length="32" name="candidates_validation_plan" read_only="true" reference="x_attme_microwaves_candidate_validations_plan" type="reference"/>
+        <element label="Dish diameter" max_length="40" name="dish_diameter" read_only="true" type="float"/>
+        <element choice="1" label="Fiber/Mw" max_length="40" name="fiber_mw" read_only="true" type="choice">
+            <choice>
+                <element label="ERROR:#N/A" sequence="0" value="ERROR:#N/A"/>
+                <element label="Fiber" sequence="0" value="Fiber"/>
+                <element label="FO" sequence="0" value="FO"/>
+                <element label="undefined" sequence="0" value="undefined"/>
+                <element label="Mw" sequence="1" value="Mw"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Fringe" max_length="40" name="fringe" read_only="true" type="string"/>
+        <element label="  Height [m]  ASNP" max_length="40" name="height" read_only="true" type="float"/>
+        <element choice="1" label="Hub/Site" max_length="40" name="hub_site" read_only="true" type="choice">
+            <choice>
+                <element label="Hub" sequence="0" value="Hub"/>
+                <element label="NA" sequence="0" value="NA"/>
+                <element label="undefined" sequence="0" value="undefined"/>
+                <element label="Site" sequence="1" value="Site"/>
+            </choice>
+        </element>
+        <element label="Lattitude" max_length="40" name="lattitude" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="City" max_length="40" name="location_city" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Municipality" max_length="40" name="location_municipality" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Region" max_length="40" name="location_region" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="State" max_length="40" name="location_state" read_only="true" type="string"/>
+        <element label="Longitude" max_length="40" name="longitude" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="LOS stastus" max_length="40" name="los_status" read_only="true" type="string"/>
+        <element label="MW repeater" max_length="40" name="mw_repeater" read_only="true" type="boolean"/>
+        <element label="Site name" max_length="50" name="name" read_only="true" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Opened" max_length="40" name="opened_at" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
+        <element default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Opened by" max_length="32" name="opened_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Owner" max_length="200" name="owner" read_only="true" type="string"/>
+        <element label="Project" max_length="32" name="project" read_only="true" reference="x_attme_datacom_proyectos" type="reference"/>
+        <element label="Remote Height [m] ASNP" max_length="40" name="remote_height" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Remote Link" max_length="40" name="remote_link" read_only="true" type="string"/>
+        <element label="Search ring request" max_length="32" name="search_ring_request" read_only="true" reference="x_attme_microwaves_search_ring_request" reference_floats="true" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Site ID" max_length="40" name="site_id" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Space diversity [Yes/No]" max_length="40" name="space_diversity" read_only="true" type="string"/>
+        <element choice="1" label="Site state" max_length="40" name="state" read_only="true" type="integer">
+            <choice>
+                <element label="New" sequence="0" value="10"/>
+                <element label="Feasibility checked" sequence="1" value="20"/>
+                <element label="Validation requested" sequence="2" value="30"/>
+                <element label="Validated" sequence="3" value="40"/>
+                <element label="Validated (feasible)" sequence="4" value="50"/>
+                <element label="Validadated (Unfeasible)" sequence="5" value="60"/>
+                <element label="Contracted" sequence="6" value="70"/>
+                <element label="Deployed" sequence="7" value="80"/>
+                <element label="Other" sequence="8" value="90"/>
+                <element label="undefined" sequence="91" value="91"/>
+            </choice>
+        </element>
+        <element label="Supplier" max_length="32" name="supplier" reference="x_attme_microwaves_candidates_validation_supplier" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Site type" max_length="40" name="type" read_only="true" type="string">
+            <choice>
+                <element label="BTS" sequence="0" value="BTS"/>
+                <element label="Collo" sequence="0" value="Collo"/>
+                <element label="ERROR:#N/A" sequence="0" value="ERROR:#N/A"/>
+                <element label="FRIENDLY SITE" sequence="0" value="FRIENDLY SITE"/>
+                <element label="Greenfield" sequence="0" value="Greenfield"/>
+                <element label="GREENFIELD (1 CAND.)" sequence="0" value="GREENFIELD (1 CAND.)"/>
+                <element label="GREENFIELD (2 CAND.)" sequence="0" value="GREENFIELD (2 CAND.)"/>
+                <element label="MW" sequence="0" value="MW"/>
+                <element label="OVERLAY" sequence="0" value="OVERLAY"/>
+                <element label="PROYECTO 2017 YA CONTRATADO" sequence="0" value="PROYECTO 2017 YA CONTRATADO"/>
+                <element label="REACTIVAR" sequence="0" value="REACTIVAR"/>
+                <element label="RENT FOR EQUIPMENT" sequence="0" value="RENT FOR EQUIPMENT"/>
+                <element label="undefined" sequence="0" value="undefined"/>
+                <element label="Co-Location" sequence="1" value="Co-Location"/>
+                <element label="COLT" sequence="2" value="COLT"/>
+                <element label="COW" sequence="3" value="COW"/>
+                <element label="Movil" sequence="4" value="Movil"/>
+            </choice>
+        </element>
+        <element label="Site unique identifier" mandatory="true" max_length="200" name="unique_identifier" read_only="true" type="string"/>
+        <index name="index">
+            <element name="candidates_validation_plan"/>
+        </index>
+        <index name="index2">
+            <element name="lattitude"/>
+            <element name="site_id"/>
+            <element name="longitude"/>
+        </index>
+        <index name="index3">
+            <element name="opened_by"/>
+        </index>
+        <index name="index4">
+            <element name="supplier"/>
+        </index>
+        <index name="index5">
+            <element name="name"/>
+        </index>
+        <index name="index6">
+            <element name="site_id"/>
+        </index>
+        <index name="index7">
+            <element name="project"/>
+        </index>
+        <index name="index8">
+            <element name="search_ring_request"/>
+        </index>
+    </element>
+</database>

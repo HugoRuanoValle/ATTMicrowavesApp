@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Design request" max_length="40" name="x_attme_microwaves_design_request" sizeclass="20" type="collection">
+        <element choice="1" label="Change" mandatory="true" max_length="40" name="change" type="choice">
+            <choice>
+                <element label="HW" sequence="0" value="HW"/>
+                <element label="SW" sequence="1" value="SW"/>
+                <element label="No change" sequence="2" value="No change"/>
+            </choice>
+        </element>
+        <element label="Point A" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Work order request" max_length="32" name="work_order_request" read_only="true" reference="x_attme_microwaves_work_order_request" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" mandatory="true" max_length="500" name="wor_comments" type="string"/>
+    </element>
+</database>

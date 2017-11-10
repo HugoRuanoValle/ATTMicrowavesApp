@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>nms_port_datacom_request</action_name>
+        <active>true</active>
+        <client>true</client>
+        <comments>La presente UI action sirve para determinar si se crea o no una Datacom request  para la presente NMS request, primeramente se busca la datacom request de puertos más reciente con el mismo agregador que la NMS request, que este activa y que haya sido solicitada por un usuario del departamento de microondas.</comments>
+        <condition>(current.state == 2 || current.state == 9 ) &amp;&amp; gs.hasRole('x_attme_microwaves.MW user') &amp;&amp; current.port_requested == true &amp;&amp; current.port_datacom_request.nil()</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <name>Create Port DCR</name>
+        <onclick>createPortDatacomRequest()</onclick>
+        <order>-100</order>
+        <script><![CDATA[function createPortDatacomRequest() {
+	
+	//esta UI action revisara primeramente si para el "agregador" definido en la solicitud NMS que se está trabajando existe un registro de "puerto" con el mismo "agregador", se revisa que este registro de puerto este relacionado con una "datacom request" que se encuentre activa y que esta "datacom request" pertenezca a un usuario del área de microondas.
+	
+	//si las tres condiciones defindas anteriormente se cumplen entonces se propone dicha Datacom request, en caso de que no se encuentre el sistema llamara al formulario de datacom request para que se cree una solicitud nueva
+	
+	
+	var nms_aggregator = g_form.getValue('aggregator');
+	var logged_user = g_user.userID;
+		
+	var ga = new GlideAjax('x_attme_microwaves.getDatacomRequestFromNMSRequest');
+	ga.addParam('sysparm_name','getDatacomRequest');
+	ga.addParam('sysparm_nms_aggregator', nms_aggregator);
+	ga.addParam('sysparm_logged_user', logged_user);
+	ga.getXML(AjaxResponseDatacomRequest);
+
+}
+
+if (typeof window == 'undefined')
+{ 
+	  createNewPortDatacomRequest();
+}
+
+
+//callback function 1 (find datacom request)
+function AjaxResponseDatacomRequest(response) {
+	
+	var result = response.responseXML.getElementsByTagName("result");
+	var proposed_datacom_request_sysid = result[0].getAttribute("proposed_datacom_request_sysid");
+	var proposed_datacom_request_number = result[0].getAttribute("proposed_datacom_request_number");
+	var proposed_datacom_request_opened_by = result[0].getAttribute("proposed_datacom_request_opened_by");
+	var proposed_datacom_request_required_date = result[0].getAttribute("proposed_datacom_request_required_date");
+	var proposed_datacom_request_project_name = result[0].getAttribute("proposed_datacom_request_project_name");
+	var proposed_datacom_request_project_scope = result[0].getAttribute("proposed_datacom_request_project_scope");
+	var proposed_datacom_request_purpose = result[0].getAttribute("proposed_datacom_request_purpose");
+	var proposed_datacom_request_requirement = result[0].getAttribute("proposed_datacom_request_requirement");
+	var proposed_datacom_port_assignment_location = result[0].getAttribute("proposed_datacom_port_assignment_location");
+	
+	var answer;
+	
+	//si se encontro un datacom request como propuesta
+	if(proposed_datacom_request_sysid != '')
+	{
+	    var text = "Was founded an active Datacom request opened by " + proposed_datacom_request_opened_by + " with the aggregator " + proposed_datacom_port_assignment_location + ": \n";
+	    text = text + "\n Number: " + proposed_datacom_request_number;
+	    text = text + "\n Required date: " + proposed_datacom_request_required_date;
+	    text = text + "\n Project name: " + proposed_datacom_request_project_name;
+	    text = text + "\n Project scope: " + proposed_datacom_request_project_scope;
+	    text = text + "\n Purpose: " + proposed_datacom_request_purpose;
+	    text = text + "\n Requirement: " + proposed_datacom_request_requirement;
+		
+		text = text + "\n\n Do you want to related the Datacom request " + proposed_datacom_request_number + " with this NMS request?";
+	
+		//se solicita confirmar si se desea relacionar la Datacom request encontrada
+	    answer = confirm(text);
+			
+		//si se acepta relacionar la DCR encontrada
+	    if (answer==true)
+        {
+			
+			gsftSubmit(null, g_form.getFormElement(), 'nms_port_datacom_request_join');
+			
+			var nms_request = g_form.getUniqueValue();
+			var ga = new GlideAjax('x_attme_microwaves.setDatacomRequestOnNMSRequest');
+            ga.addParam('sysparm_name','setPortDatacomRequest');
+            ga.addParam('sysparm_proposed_datacom_request_sysid', proposed_datacom_request_sysid);
+			ga.addParam('sysparm_proposed_datacom_request_number', proposed_datacom_request_number);
+            ga.addParam('sysparm_proposed_nms_request', nms_request);
+			ga.getXML(AjaxResponseSetDCR);
+			      
+        
+		}
+     
+		//si no se acepta relacionar la DCR encontrada
+     	else
+        {
+			//ya que no se deseo adjuntar la DCR encontrada se pregunta si se desea crear un nueva
+				
+			var answer_2 = confirm("Do you want to create a new Port Datacom request?");
+			
+			//en el caso de que se acepte crear una nueva Datacom request
+			if(answer_2 == true)
+			{
+				gsftSubmit(null, g_form.getFormElement(), 'nms_port_datacom_request');
+			}
+			
+			//si no se acepta crear una nueva DCR
+			else
+			{
+				return false;
+			}
+			
+        }
+		    
+	}
+	
+	
+	// si no se encontro ninguna datacom request como propuesta
+	else
+	{
+		var text_2 = "Wasn't founded an active Datacom request with the same aggregator as this NMS request. Do you want to create a new Datacom request?";
+		
+		answer = confirm(text_2);
+		
+		//en el caso de que se acepte crear una nueva Datacom request
+		if(answer == true)
+		{
+			gsftSubmit(null, g_form.getFormElement(), 'nms_port_datacom_request');
+		}
+			
+		//si no se acepta crear una nueva DCR
+		else
+		{
+			return false;
+		}
+	
+	}
+	
+		
+}
+
+//callback function "dummy"
+function AjaxResponseSetDCR(response) { }
+
+//función server side para crear una nueva Datacom Request
+function createNewPortDatacomRequest()
+{
+	//creamos un nuevo registro de Datacom request
+	var datacom_request = new GlideRecord('x_attme_datacom_datacom_request');
+	datacom_request.insert();
+	
+	var port = new GlideRecord('x_attme_datacom_port_assignment');
+	port.datacom_request = datacom_request.sys_id;
+	port.location = current.aggregator;
+	port.insert();	
+	
+	
+	//guardamos la datacom creada en el campo "port datacom request" del la solicitud NMS
+	current.port_datacom_request = datacom_request.sys_id;
+	current.update();
+	
+	//definimos las URLs redirect y return
+	action.setRedirectURL(datacom_request);
+	action.setReturnURL(current);
+
+	//notificamos al usuario que se ha creado 
+	gs.addInfoMessage("Datacom request " + datacom_request.number +" created for de NMS request " + current.number + ". Please complete the request and port assignment information");
+
+    
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-09-07 22:04:20</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>665b5bfddb81430028f3d5ab5e9619d5</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_name>Create Port DCR</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_ui_action_665b5bfddb81430028f3d5ab5e9619d5</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-09-12 15:05:32</sys_updated_on>
+        <table>x_attme_microwaves_nms_requests</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

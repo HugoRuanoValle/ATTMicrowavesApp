@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="protection" table="x_attme_microwaves_network_optimization_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:55:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30a24f51db5d070028f3d5ab5e96193e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:55:22</sys_updated_on>
+            <value>1+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0fa20f51db5d070028f3d5ab5e961947</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:55:40</sys_updated_on>
+            <value>1+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>73b24391db5d070028f3d5ab5e96197b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:55:50</sys_updated_on>
+            <value>2+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:55:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1ac24391db5d070028f3d5ab5e96197b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:55:59</sys_updated_on>
+            <value>2+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2+2</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:56:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a4d2cb51db5d070028f3d5ab5e9619f5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:56:13</sys_updated_on>
+            <value>2+2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:56:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6fd2cb51db5d070028f3d5ab5e9619f5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:56:24</sys_updated_on>
+            <value>3+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>3+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:56:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56e24391db5d070028f3d5ab5e9619a1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:56:33</sys_updated_on>
+            <value>3+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:56:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>68f20391db5d070028f3d5ab5e9619b4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:56:50</sys_updated_on>
+            <value>4+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:56:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a8034791db5d070028f3d5ab5e961941</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:56:58</sys_updated_on>
+            <value>4+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4+4</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:57:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>72034791db5d070028f3d5ab5e96198b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:57:08</sys_updated_on>
+            <value>4+4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4x4</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:57:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>89134791db5d070028f3d5ab5e961928</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 16:57:20</sys_updated_on>
+            <value>4x4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:00:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>94234791db5d070028f3d5ab5e9619e3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:00:21</sys_updated_on>
+            <value>5+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>5+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:00:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e8d3c391db5d070028f3d5ab5e96199f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:00:32</sys_updated_on>
+            <value>5+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>6+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:00:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ad38b91db5d070028f3d5ab5e96194c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:00:40</sys_updated_on>
+            <value>6+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>6+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:00:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>15e30791db5d070028f3d5ab5e9619e5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:00:51</sys_updated_on>
+            <value>6+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>7+0</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:00:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5fe34791db5d070028f3d5ab5e96198d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:01:02</sys_updated_on>
+            <value>7+0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>7+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:01:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8af34791db5d070028f3d5ab5e96198e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:01:11</sys_updated_on>
+            <value>7+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>8+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:01:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5404cb91db5d070028f3d5ab5e96196a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:01:21</sys_updated_on>
+            <value>8+1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>9+1</label>
+            <language>en</language>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 17:01:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43044791db5d070028f3d5ab5e96198f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-09-18 17:01:30</sys_updated_on>
+            <value>9+1</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>protection</element>
+            <name>x_attme_microwaves_network_optimization_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-09-18 16:55:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>f2a24f51db5d070028f3d5ab5e96193f</sys_id>
+            <sys_mod_count>39</sys_mod_count>
+            <sys_name>protection</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_choice_x_attme_microwaves_network_optimization_request_protection</sys_update_name>
+            <sys_updated_by>angel.pineda</sys_updated_by>
+            <sys_updated_on>2017-10-10 00:00:37</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

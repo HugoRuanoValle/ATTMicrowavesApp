@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_attme_microwaves_candidate_validations_plan</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_attme_microwaves_candidate_validations_plan">state=1^ORstate=10^ORstate=11^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="10"/>
+            <item endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="11"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CVP CVR's import and sites update</name>
+        <order>1000</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+//este script action ejecuta la actualización de sitios al momento que un "plan de validación de candidatos" es cargado, primeramente se actualizan los sitios a validar, y en segundo termino se crean las "candidates validation requests".
+	
+	
+//declaramos variables y constantes
+var mw_cvp_table = 'x_attme_microwaves_candidate_validations_plan';
+var mw_cvp_sysid = current.sys_id;
+var datasource_table = 'sys_data_source';
+	
+var datasource_sysid = gs.getProperty('x_attme_microwaves.DataSource(SiteCVPUpdate)');
+var scheduled_import_sysid = gs.getProperty('x_attme_microwaves.ScheduledImport(SiteCVPUpdate)');
+		
+var datasource_sysid_2 = gs.getProperty('x_attme_microwaves.DataSource(CVRImport)');
+var scheduled_import_sysid_2 = gs.getProperty('x_attme_microwaves.ScheduledImport(CVRImport)');
+
+	
+//Revisamos que para el registro de CVP exista un archivo adjunto.
+var attachment = new GlideRecord('sys_attachment');
+attachment.addQuery('table_name', mw_cvp_table);
+attachment.addQuery('table_sys_id', current.sys_id);
+attachment.setLimit(1);
+attachment.query(); 
+attachment.next();
+
+//si existe al menos un registro de adjunto en el plan de validaciones
+if(attachment.getRowCount() > 0)
+{
+	//revisamos que el attachment tenga la extensión correcta (XLS o XLSX)
+    if((attachment.file_name.indexOf('.xlsx') > -1) || (attachment.file_name.indexOf('.xls') > -1) )
+	{	
+	
+	//ACTUALIZACION DE LOS SITIOS POR MEDIO DEL PLAN DE VALIDACIONES
+	
+	   //cambiamos la propiedad x_attme_microwaves.SitesValidationPlanID, el nuevo valor de esta será el sys_id del "candidates validation plan" al cual se le carga el archivo adjunto
+	   global.setPropertyScopedApp('x_attme_microwaves.SitesValidationPlanID', mw_cvp_sysid);
+	
+	   //retiramos los adjuntos del Data source (Sites update on CVP)
+	   global.deleteAttachmentScopedApp(datasource_table, datasource_sysid);
+	
+	   //cargamos en el Data source (Sites update on CVP) el archivo adjunto
+	   global.copyAttachmentsScopedApp(mw_cvp_table, mw_cvp_sysid, datasource_table, datasource_sysid);
+	
+	   //hacemos el execute del schedule import (Sites update on CVP)
+	   global.executeScopedAppScheduledImport(scheduled_import_sysid);
+	
+	
+    //CREACION DE LOS CVR's CONSIDERANDO EL PLAN DE VALIDACIONES
+	
+	   //cambiamos el contenido de la propiedad "x_attme_microwaves.CVRValidationPlanID"
+	   global.setPropertyScopedApp('x_attme_microwaves.CVRValidationPlanID', mw_cvp_sysid);
+	
+	   //retiramos los adjuntos del Data source (CVR import)
+	   global.deleteAttachmentScopedApp(datasource_table, datasource_sysid_2);
+	
+	   //cargamos en el Data source (CVR import) el archivo adjunto
+	   global.copyAttachmentsScopedApp(mw_cvp_table, mw_cvp_sysid, datasource_table, datasource_sysid_2);
+	
+	   //hacemos el execute para ambos schedule import (Sites update on CVP)
+	   global.executeScopedAppScheduledImport(scheduled_import_sysid_2);
+	
+	
+	   //agregamos comentarios en el candidates validation plan
+	   current.comments = 'Attachment "' + attachment.file_name +'" loaded, information in \"TRACKER\" sheet was processed.';
+		gs.addInfoMessage("Attachment processed, candidates validation requests will be created");
+	
+	   //borramos los adjuntos del registro de plan de validación de candidatos
+	   global.deleteAttachmentScopedApp(mw_cvp_table, mw_cvp_sysid);
+	
+	}
+	
+	//si el adjunto posee una extensión que no sea XLS o XLSX
+	if((attachment.file_name.indexOf('.xlsx') == -1) || (attachment.file_name.indexOf('.xls') == -1) )
+	{
+	   gs.addErrorMessage("The attachment file has a extension that it's not possible to process. Please only attach XLS or XLSX files.");
+		
+	   //borramos los adjuntos del registro de MW request
+	   global.deleteAttachmentScopedApp(mw_cvp_table, mw_cvp_sysid);
+	}
+		
+}	
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-05 15:28:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9b38009fdbd8c30028f3d5ab5e9619b9</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>CVP CVR's import and sites update</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_9b38009fdbd8c30028f3d5ab5e9619b9</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-24 19:09:36</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9b38009fdbd8c30028f3d5ab5e9619b9"/>
+</record_update>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_attme_microwaves_sites_import__fx_info_" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_import_row</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>d2344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_import_set</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>56344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_import_state</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>d6344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_target_table</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>5a344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_target_sys_id</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>da344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_row_error</element>
+            <list_id display_value="x_attme_microwaves_sites_import__fx_info_" element="NULL" name="x_attme_microwaves_sites_import__fx_info_" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">de344dffdb00cb0028f3d5ab5e9619f1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_id>5e344dffdb00cb0028f3d5ab5e9619f2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_attme_microwaves_sites_import__fx_info_</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-07-25 22:49:08</sys_created_on>
+            <sys_customer_update>true</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>de344dffdb00cb0028f3d5ab5e9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_attme_microwaves_sites_import__fx_info_</sys_name>
+            <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+            <sys_update_name>sys_ui_list_x_attme_microwaves_sites_import__fx_info__null</sys_update_name>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-07-25 22:49:08</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

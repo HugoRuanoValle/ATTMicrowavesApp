@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_filter">
+    <sys_filter action="INSERT_OR_UPDATE">
+        <filter table="contract_sla">nameSTARTSWITHMW^EQ<item endquery="false" field="name" goto="false" newquery="false" operator="STARTSWITH" or="false" value="MW"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <group/>
+        <last_used/>
+        <mobile>false</mobile>
+        <roles/>
+        <sys_class_name>sys_filter</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-07-20 15:31:06</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>01007546db800f00e7bbdbbb5e96196d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Microwaves area SLAs</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_filter_01007546db800f00e7bbdbbb5e96196d</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-07-20 15:31:06</sys_updated_on>
+        <table>contract_sla</table>
+        <title>Microwaves area SLAs</title>
+        <user/>
+    </sys_filter>
+</record_update>

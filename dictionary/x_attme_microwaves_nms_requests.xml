@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="NMS request" max_length="40" name="x_attme_microwaves_nms_requests" sizeclass="10" type="collection">
+        <element label="Aggregator" max_length="32" name="aggregator" reference="cmn_location" reference_qual="u_datacom_location=true^EQ" reference_qual_condition="u_datacom_location=true^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Close code" max_length="40" name="close_code" type="string">
+            <choice>
+                <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>
+                <element label="Work completed with issues" sequence="1" value="Work completed with issues"/>
+            </choice>
+        </element>
+        <element choice="1" label="Configuration" max_length="40" name="configuration" type="choice">
+            <choice>
+                <element label="HSB" sequence="0" value="HSB"/>
+                <element label="SD" sequence="1" value="SD"/>
+                <element label="FD" sequence="2" value="FD"/>
+                <element label="MIMO" sequence="3" value="MIMO"/>
+                <element label="XPIC" sequence="4" value="XPIC"/>
+                <element label="XPIC SD" sequence="5" value="XPIC SD"/>
+            </choice>
+        </element>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Port datacom solution URL" max_length="1024" name="datacom_solution_url" type="url"/>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Topology" mandatory="true" max_length="1024" name="input_document_url_2" type="url"/>
+        <element attributes="edge_encryption_enabled=true" default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Port request format" max_length="40" name="input_document_url_3" type="url"/>
+        <element label="Observations" max_length="5000" name="observations" type="string"/>
+        <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Port datacom request" max_length="32" name="port_datacom_request" reference="x_attme_datacom_datacom_request" type="reference"/>
+        <element label="Port requested" max_length="40" name="port_requested" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Priority reason" max_length="300" name="priority_reason" type="string"/>
+        <element choice="1" label="Protection" max_length="40" name="protection" type="choice">
+            <choice>
+                <element label="1+0" value="1+0"/>
+                <element label="1+1" value="1+1"/>
+                <element label="2+0" value="2+0"/>
+                <element label="2+1" value="2+1"/>
+                <element label="2+2" value="2+2"/>
+                <element label="3+0" value="3+0"/>
+                <element label="3+1" value="3+1"/>
+                <element label="4+0" value="4+0"/>
+                <element label="4+1" value="4+1"/>
+                <element label="4+4" value="4+4"/>
+                <element label="4x4" value="4x4"/>
+                <element label="5+0" value="5+0"/>
+                <element label="5+1" value="5+1"/>
+                <element label="6+0" value="6+0"/>
+                <element label="6+1" value="6+1"/>
+                <element label="7+0" value="7+0"/>
+                <element label="7+1" value="7+1"/>
+                <element label="8+1" value="8+1"/>
+                <element label="9+1" value="9+1"/>
+            </choice>
+        </element>
+        <element choice="1" label="Radio model" max_length="40" name="radio_model" type="choice">
+            <choice>
+                <element label="IP20G -  IP20C" sequence="0" value="IP20G -  IP20C"/>
+                <element label="IP20N -  IP20C" sequence="1" value="IP20N -  IP20C"/>
+                <element label="IP20G -  RFUC" sequence="2" value="IP20G -  RFUC"/>
+                <element label="IP20N -  RFUC" sequence="3" value="IP20N -  RFUC"/>
+                <element label="IP10" sequence="4" value="IP10"/>
+                <element label="RTN 910" sequence="5" value="RTN 910"/>
+                <element label="RTN 950" sequence="6" value="RTN 950"/>
+                <element label="RTN 950A" sequence="7" value="RTN 950A"/>
+                <element label="RTN 980" sequence="8" value="RTN 980"/>
+                <element label="iPASOLINK  200" sequence="9" value="iPASOLINK  200"/>
+                <element label="iPASOLINK  400" sequence="10" value="iPASOLINK  400"/>
+                <element label="iPASOLINK  1000" sequence="11" value="iPASOLINK  1000"/>
+                <element label="MPR 9500" sequence="12" value="MPR 9500"/>
+            </choice>
+        </element>
+        <element label="Routing datacom request" max_length="32" name="routing_datacom_request" reference="x_attme_datacom_datacom_request" type="reference"/>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="IP Plan URL" max_length="1024" name="solution_document_url_2" type="url"/>
+        <element choice="1" label="Technology" mandatory="true" max_length="40" name="technology" type="choice">
+            <choice>
+                <element label="CERAGON" value="CERAGON"/>
+                <element label="ERICSSON" value="ERICSSON"/>
+                <element label="HUAWEI" value="HUAWEI"/>
+                <element label="NEC" value="NEC"/>
+                <element label="NOKIA" value="NOKIA"/>
+            </choice>
+        </element>
+        <element label="Work order request" max_length="32" name="work_order_request" read_only="true" reference="x_attme_microwaves_work_order_request" type="reference"/>
+    </element>
+</database>

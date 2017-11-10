@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_producer">
+    <sc_cat_item_producer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_both</availability>
+        <billable>false</billable>
+        <can_cancel>false</can_cancel>
+        <category/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description><![CDATA[<p><strong><span style="font-size: 18pt;">Upload attachment with Work order request updates</span></strong></p>
+<p><span style="font-size: 12pt;">Please use the next link to upload an Excel file that contains updates for Sites records. <strong>Only upload files with &#34;.XLSX&#34; or &#34;.XLS&#34;</strong> extensions, other kind of extensions are going to return an error message:</span></p>]]></description>
+        <entitlement_script/>
+        <group/>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Import WOR and subtask from attach</name>
+        <no_cart>false</no_cart>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_search>false</no_search>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("./com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=3ba560c1db06434028f3d5ab5e961972&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <roles>snc_internal</roles>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <script><![CDATA[processAttachment();
+
+function processAttachment(){
+//este script action ejecuta el import de "work order request" a partir del archivo adjunt, así mismo de las tareas asociadas a cada work order request.
+		
+//declaramos variables y constantes
+current.short_description = "AADELETE_WOR";
+current.number = "AADELETE_WOR";
+var wor_table = 'x_attme_microwaves_work_order_request';
+var wor_sysid = current.sys_id;
+var datasource_table = 'sys_data_source';
+var datasource_sysid = gs.getProperty('x_attme_microwaves.DataSource(WOR&SubtaskImport)');
+var scheduled_import_sysid = gs.getProperty('x_attme_microwaves.ScheduledImport(WOR&SubtaskImport)');
+var logged_user = gs.getUserID();
+var mlinks_url = producer.mlinks_url;
+var llds_url = producer.llds_url;
+var deliverable_url = producer.deliverable_url;
+	
+//Primeramente revisamos que para el registro exista un archivo adjunto.
+var attachment = new GlideRecord('sys_attachment');
+attachment.addQuery('table_name', wor_table);
+attachment.addQuery('table_sys_id', wor_sysid);
+attachment.setLimit(1);
+attachment.query(); 
+attachment.next();
+	
+//si existe al menos un registro de adjunto
+if(attachment.getRowCount() > 0)
+{
+	//revisamos que el attachment tenga la extensión correcta (XLS o XLSX)
+    if((attachment.file_name.indexOf('.xlsx') > -1) || (attachment.file_name.indexOf('.xls') > -1) || (attachment.file_name.indexOf('.XLSX') > -1) || (attachment.file_name.indexOf('.XLS') > -1) )
+	{	
+	
+	   //CARGA DE WORK ORDER REQUESTS CONSIDERANDO EL ARCHIVO CARGAD
+		
+	   //Seteamos la propiedad del sistema x_attme_microwaves.TriggerRecordWORImportAndSubtask
+	   global.setPropertyScopedApp('x_attme_microwaves.TriggerRecordWORImportAndSubtask', wor_sysid);
+		
+	   //Seteamos la propiedad del sistema x_attme_microwaves.WORRequestedFor
+	   global.setPropertyScopedApp('x_attme_microwaves.WORRequestedFor', logged_user);
+				
+	   //Seteamos la propiedad del sistema x_attme_microwaves.WORDeliverable_url
+	   global.setPropertyScopedApp('x_attme_microwaves.WORDeliverable_url', llds_url);
+		
+	   //Seteamos la propiedad del sistema x_attme_microwaves.WORLLDs_url
+	   global.setPropertyScopedApp('x_attme_microwaves.WORLLDs_url', llds_url);
+		
+	   //Seteamos la propiedad del sistema x_attme_microwaves.WORMlinks_url
+	   global.setPropertyScopedApp('x_attme_microwaves.WORMlinks_url', mlinks_url);
+		
+	   //retiramos los adjuntos del Data source (WOR & subtasks import)
+	   global.deleteAttachmentScopedApp(datasource_table, datasource_sysid);
+	
+	   //cargamos en el Data source (WOR & subtasks import) el archivo adjunto
+	   global.copyAttachmentsScopedApp(wor_table, wor_sysid, datasource_table, datasource_sysid);
+	
+	   //hacemos el execute para ambos schedule import (WOR & subtasks import)
+	   global.executeScopedAppScheduledImport(scheduled_import_sysid);
+				
+	   //borramos los adjuntos del registro
+	   global.deleteAttachmentScopedApp(wor_table, wor_sysid);
+		
+	   //borramos el registro del sitio que se creo y que se encuentra vacío
+	   gs.eventQueue('x_attme_microwaves.deleteWORRecord', current, wor_table, wor_sysid);
+	
+	}
+	
+	//si el adjunto posee una extensión que no sea XLS o XLSX
+	else if((attachment.file_name.indexOf('.xlsx') == -1) || (attachment.file_name.indexOf('.xls') == -1) || (attachment.file_name.indexOf('.XLSX') == -1) || (attachment.file_name.indexOf('.XLS') == -1))
+	{
+	   gs.addErrorMessage("The attachment file has a extension that it's not possible to process. Please only attach XLS or XLSX files.");
+		
+	   //borramos los adjuntos del registro
+	   global.deleteAttachmentScopedApp(wor_table, wor_sysid);
+		
+	   //borramos el registro del sitio que se creo y que se encuentra vacío
+	   gs.eventQueue('x_attme_microwaves.deleteWORRecord', current, wor_table, wor_sysid);
+
+	     	   
+	}
+	
+		
+}
+	
+//Esperamos a que esta termine la carga del archivo, para ello evaluamos el contenido de la propiedad del sistem x_attme_microwaves.onCompleteWORImportAndSubtask
+
+	
+	var expected_answer = "Load complete for record: " + wor_sysid;
+	
+	while(true)
+	{
+	    var onComplete_string = gs.getProperty('x_attme_microwaves.onCompleteWORImportAndSubtask');
+			
+		//cuando se determina que se ha completado la carga se sale del ciclo while
+		if(onComplete_string == expected_answer)
+		{
+			break;  
+		}
+		   
+	}
+	
+	//se redirecciona al usuario a la lista de work orders
+    producer.redirect = "x_attme_microwaves_work_order_request_list.do?";
+	
+	//notificamos que se ha procesado el archivo
+	gs.addInfoMessage("Attachment uploaded, work order requests created");
+	
+}]]></script>
+        <short_description/>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item_producer</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-10-24 17:37:59</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>3ba560c1db06434028f3d5ab5e961972</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>Import WOR and subtask from attach</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sc_cat_item_producer_3ba560c1db06434028f3d5ab5e961972</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-07 22:08:44</sys_updated_on>
+        <table_name>x_attme_microwaves_work_order_request</table_name>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <view/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item_producer>
+    <sys_translated_text action="delete_multiple" query="documentkey=3ba560c1db06434028f3d5ab5e961972"/>
+    <fx_price action="delete_multiple" query="id=3ba560c1db06434028f3d5ab5e961972"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>3ba560c1db06434028f3d5ab5e961972</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-10-24 17:37:59</sys_created_on>
+        <sys_id>3fa560c1db06434028f3d5ab5e961972</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-24 17:37:59</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>3ba560c1db06434028f3d5ab5e961972</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-10-24 17:38:00</sys_created_on>
+        <sys_id>33a560c1db06434028f3d5ab5e961973</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-24 17:38:00</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

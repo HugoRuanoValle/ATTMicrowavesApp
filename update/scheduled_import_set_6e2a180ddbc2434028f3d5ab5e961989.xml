@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="scheduled_import_set">
+    <scheduled_import_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <data_source display_value="MW WOR and subtasks import">452bc445dbc2434028f3d5ab5e96198d</data_source>
+        <map/>
+        <name>MW WOR and subtasks import</name>
+        <order/>
+        <parent/>
+        <post_script><![CDATA[gs.info('Finish: Work orders requests created from attachment');]]></post_script>
+        <post_script_bool>true</post_script_bool>
+        <pre_script><![CDATA[gs.info('Start: Work order requests created from attachment');]]></pre_script>
+        <pre_script_bool>true</pre_script_bool>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-02 00:00:00</run_period>
+        <run_start>2117-01-01 06:00:00</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>periodically</run_type>
+        <sys_class_name>scheduled_import_set</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-10-24 16:47:39</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6e2a180ddbc2434028f3d5ab5e961989</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MW WOR and subtasks import</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>scheduled_import_set_6e2a180ddbc2434028f3d5ab5e961989</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-10-24 18:05:59</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </scheduled_import_set>
+</record_update>

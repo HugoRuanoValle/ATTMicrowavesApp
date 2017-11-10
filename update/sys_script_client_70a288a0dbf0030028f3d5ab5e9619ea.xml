@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>El presente client script determina la "visit_week" a partir de la información del campo "visit_date_time"</description>
+        <field>visit_date_time</field>
+        <global>true</global>
+        <messages/>
+        <name>CVR set number of week</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+//el presente client script sirve para setear el campo "visit week" a partir de la información del campo "visit date/time"
+	var visit_date_time = g_form.getValue('visit_date_time');
+	var ga = new GlideAjax('x_attme_microwaves.getDayofWeekCVR');
+	ga.addParam('sysparm_name','getWeek');
+	ga.addParam('sysparm_visit_date_time', visit_date_time);
+	ga.getXML(AjaxResponseWeek);
+}
+
+//callback function
+function AjaxResponseWeek(response) {
+	
+	var result = response.responseXML.getElementsByTagName("result");
+	var week_number = result[0].getAttribute("week_number");
+	
+	g_form.setValue('visit_week', week_number);
+	
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-08-21 22:33:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>70a288a0dbf0030028f3d5ab5e9619ea</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>CVR set number of week</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_client_70a288a0dbf0030028f3d5ab5e9619ea</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-08-21 22:47:17</sys_updated_on>
+        <table>x_attme_microwaves_candidate_validation_request</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="22" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Antenna model" mandatory="true" max_length="40" name="antenna_model" type="string">
+            <choice>
+                <element label="SHP3-11W" sequence="0" value="SHP3-11W"/>
+                <element label="VHLP3-11W" sequence="0" value="VHLP3-11W"/>
+                <element label="VHLP4-7W-CR4C" sequence="0" value="VHLP4-7W-CR4C"/>
+                <element label="VHLP6-7W-CR4C" sequence="0" value="VHLP6-7W-CR4C"/>
+                <element label="VHLPX2-71W" sequence="0" value="VHLPX2-71W"/>
+                <element label="VHLPX4-15" sequence="0" value="VHLPX4-15"/>
+                <element label="VHLPX4-15-HW1" sequence="0" value="VHLPX4-15-HW1"/>
+                <element label="VHLPX4-23" sequence="0" value="VHLPX4-23"/>
+                <element label="VHLPX4-71W" sequence="0" value="VHLPX4-71W"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Band" mandatory="true" max_length="40" name="band" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Bandwidth" mandatory="true" max_length="40" name="bandwidth" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Capacity" mandatory="true" max_length="40" name="capacity" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Change" mandatory="true" max_length="40" name="change" type="string">
+            <choice>
+                <element label="HW" sequence="10" value="HW"/>
+                <element label="SW" sequence="20" value="SW"/>
+                <element label="No change" sequence="30" value="No change"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Close code" max_length="40" name="close_code" type="string">
+            <choice>
+                <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>
+                <element label="Work completed with issues" sequence="1" value="Work completed with issues"/>
+            </choice>
+        </element>
+        <element label="Design change" max_length="40" name="design_change" read_only="true" type="boolean"/>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Mlink URL" mandatory="true" max_length="1024" name="input_document_url_2" type="url"/>
+        <element label="Deliverable URL" max_length="1024" name="input_document_url_3" type="url"/>
+        <element attributes="edge_encryption_enabled=true" label="Modulation" mandatory="true" max_length="40" name="modulation" type="string"/>
+        <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Reception level (dBm)" mandatory="true" max_length="40" name="reception_level" type="float"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Technology" mandatory="true" max_length="40" name="technology" type="string">
+            <choice>
+                <element label="CERAGON" sequence="0" value="CERAGON"/>
+                <element label="ERICSSON" sequence="0" value="ERICSSON"/>
+                <element label="HUAWEI" sequence="0" value="HUAWEI"/>
+                <element label="NEC" sequence="0" value="NEC"/>
+                <element label="NOKIA" sequence="0" value="NOKIA"/>
+            </choice>
+        </element>
+        <element label="Tranmission power (dBm)" mandatory="true" max_length="40" name="transmission_power" type="float"/>
+        <element label="TX high freq (MHz)" mandatory="true" max_length="40" name="tx_high_freq" type="float"/>
+        <element label="TX low freq (MHz)" mandatory="true" max_length="40" name="tx_low_freq" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" mandatory="true" max_length="5000" name="wor_comments" type="string"/>
+    </element>
+</database>

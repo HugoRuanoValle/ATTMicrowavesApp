@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <collection>x_attme_microwaves_scni_request</collection>
+        <condition table="x_attme_microwaves_scni_request">assignment_groupVALCHANGES^EQ<item endquery="false" field="assignment_group" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <description/>
+        <event_name/>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-family: verdana, geneva;"><font face="verdana,geneva">Equipo ${assignment_group}</font></span></p>
+<p><span style="font-family: verdana, geneva;"><font face="verdana,geneva">Se les informa que la solicitud SCNI con el n&uacute;mero <em>${number}</em> ha sido asignada a su equipo. A continuaci&oacute;n se presenta el detalle de la solicitud:</font></span></p>
+<p><span style="font-family: verdana, geneva;"><font face="verdana,geneva">Enlace: ${point_a}/${point_b}<br />Technology: ${work_order_request.technology}<br />Antenna model: ${work_order_request.antenna_model}<br />TX low frequency: ${work_order_request.tx_low_freq}<br />TX high frequency: ${work_order_request.tx_high_freq}<br />Band: ${work_order_request.band}<br />Modulation: ${work_order_request.modulation}<br />Bandwidth: ${work_order_request.bandwidht}<br />Capacity: ${work_order_request.capacity}<br />Transmission power (dBm): ${work_order_request.transmission_power}<br />Reception level (dBm): ${work_order_request.reception_level}<br />Change: ${work_order_request.change}<br />Comments: ${work_order_request.wor_comments}</font></span></p>
+<p><span style="font-family: verdana, geneva;"><font face="verdana,geneva">Pueden revisar el detalle de la solicitud accediendo a la siguiente liga: ${URI}</font></span></p>
+<p><span style="font-family: verdana, geneva;"><font face="verdana,geneva">Saludos</font></span>&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>CNI assigned to group</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>assignment_group</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Solicitud SCNI - ${number} asignada al grupo ${assignment_group}</subject>
+        <subscribable>true</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-01 00:51:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e50c825bdbc68300e7bbdbbb5e96198b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>CNI assigned to group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysevent_email_action_e50c825bdbc68300e7bbdbbb5e96198b</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-02 17:36:55</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

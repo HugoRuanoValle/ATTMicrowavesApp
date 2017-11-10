@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Special events plan" max_length="40" name="x_attme_microwaves_special_events_plan" type="collection">
+        <element label="Comments" max_length="4000" name="comments" type="journal_input"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript: getDefaultSpecialEventsPlanName()" display="true" label="Name" mandatory="true" max_length="50" name="name" type="string"/>
+        <element default="javascript:gs.nowDateTime()" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Opened " max_length="40" name="opened_at" read_only="true" type="glide_date_time" use_dynamic_default="true"/>
+        <element default="javascript:gs.getUserID()" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Opened by" max_length="32" name="opened_by" read_only="true" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <element label="Project" mandatory="true" max_length="32" name="project" reference="pm_project" type="reference"/>
+        <element choice="1" default="javascript: getCurrentYear()" label="Year" mandatory="true" max_length="40" name="year" type="choice">
+            <choice>
+                <element label="2015" sequence="0" value="2015"/>
+                <element label="2016" sequence="1" value="2016"/>
+                <element label="2017" sequence="2" value="2017"/>
+                <element label="2018" sequence="3" value="2018"/>
+                <element label="2019" sequence="4" value="2019"/>
+                <element label="2020" sequence="5" value="2020"/>
+                <element label="2021" sequence="6" value="2021"/>
+                <element label="2022" sequence="7" value="2022"/>
+                <element label="2023" sequence="8" value="2023"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="opened_by"/>
+        </index>
+        <index name="index2">
+            <element name="project"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="MW CVR update" max_length="40" name="x_attme_microwaves_mw_cvr_update" type="collection">
+        <element attributes="import_attribute_name=Aprobación accesos de puntas B" label="Aprobación accesos de puntas B" max_length="40" name="u_aprobación_a_os_de_puntas_b" type="glide_date"/>
+        <element attributes="import_attribute_name=Aprobación de Collo Ap" label="Aprobación de Collo Ap" max_length="40" name="u_aprobación_de_collo_ap" type="glide_date"/>
+        <element attributes="import_attribute_name=CANDIDATOS A VALIDAR (BTS)" label="CANDIDATOS A VALIDAR (BTS)" max_length="40" name="u_candidatos_a_validar__bts_" type="integer"/>
+        <element attributes="import_attribute_name=CONTACTO" label="CONTACTO" max_length="40" name="u_contacto" type="float"/>
+        <element attributes="import_attribute_name=CUADRILLA MW,edge_encryption_enabled=true" label="CUADRILLA MW" max_length="40" name="u_cuadrilla_mw" type="string"/>
+        <element attributes="import_attribute_name=DIA" label="DIA" max_length="40" name="u_dia" type="glide_date"/>
+        <element attributes="import_attribute_name=Entegable TRR a SAC" label="Entegable TRR a SAC" max_length="40" name="u_entegable_trr_a_sac" type="glide_date"/>
+        <element attributes="import_attribute_name=Entregables enviados por el proveedor" label="Entregables enviados por el proveedor" max_length="40" name="u_entregables__r_el_proveedor" type="glide_date"/>
+        <element attributes="import_attribute_name=ESTADO,edge_encryption_enabled=true" label="ESTADO" max_length="40" name="u_estado" type="string"/>
+        <element attributes="import_attribute_name=FIN RECORRIDO,edge_encryption_enabled=true" label="FIN RECORRIDO" max_length="40" name="u_fin_recorrido" type="string"/>
+        <element attributes="import_attribute_name=HORA DE VISITA" label="HORA DE VISITA" max_length="40" name="u_hora_de_visita" type="glide_date_time"/>
+        <element attributes="import_attribute_name=ID_OWNER,edge_encryption_enabled=true" label="ID_OWNER" max_length="40" name="u_id_owner" type="string"/>
+        <element attributes="import_attribute_name=INICIO RECORRIDO,edge_encryption_enabled=true" label="INICIO RECORRIDO" max_length="40" name="u_inicio_recorrido" type="string"/>
+        <element attributes="import_attribute_name=LAT,edge_encryption_enabled=true" label="LAT" max_length="40" name="u_lat" type="string"/>
+        <element attributes="import_attribute_name=LIDER SAC,edge_encryption_enabled=true" label="LIDER SAC" max_length="40" name="u_lider_sac" type="string"/>
+        <element attributes="import_attribute_name=LIDER  RF,edge_encryption_enabled=true" label="LIDER  RF" max_length="40" name="u_lider__rf" type="string"/>
+        <element attributes="import_attribute_name=LONG,edge_encryption_enabled=true" label="LONG" max_length="40" name="u_long" type="string"/>
+        <element attributes="import_attribute_name=MUNICIPIO,edge_encryption_enabled=true" label="MUNICIPIO" max_length="40" name="u_municipio" type="string"/>
+        <element attributes="import_attribute_name=OWNER,edge_encryption_enabled=true" label="OWNER" max_length="40" name="u_owner" type="string"/>
+        <element attributes="import_attribute_name=Proveedor,edge_encryption_enabled=true" label="Proveedor" max_length="40" name="u_proveedor" type="string"/>
+        <element attributes="import_attribute_name=REGION" label="REGION" max_length="40" name="u_region" type="integer"/>
+        <element attributes="import_attribute_name=SITE ID,edge_encryption_enabled=true" label="SITE ID" max_length="40" name="u_site_id" type="string"/>
+        <element attributes="import_attribute_name=SITE NAME,edge_encryption_enabled=true" label="SITE NAME" max_length="40" name="u_site_name" type="string"/>
+        <element attributes="import_attribute_name=Solicitud de acceso a puntas B" label="Solicitud de acceso a puntas B" max_length="40" name="u_solicitud_de_eso_a_puntas_b" type="glide_date"/>
+        <element attributes="import_attribute_name=Solicitud de aprobación de Collo Ap" label="Solicitud de aprobación de Collo Ap " max_length="40" name="u_solicitud_de_ón_de_collo_ap" type="glide_date"/>
+        <element attributes="import_attribute_name=TX,edge_encryption_enabled=true" label="TX" max_length="40" name="u_tx" type="string"/>
+        <element attributes="import_attribute_name=TYPE,edge_encryption_enabled=true" label="TYPE" max_length="40" name="u_type" type="string"/>
+        <element attributes="import_attribute_name=Validación realizada de puntas B" label="Validación realizada de puntas B" max_length="40" name="u_validación_r_da_de_puntas_b" type="glide_date"/>
+        <element attributes="import_attribute_name=WEEK" label="WEEK" max_length="40" name="u_week" type="integer"/>
+    </element>
+</database>
