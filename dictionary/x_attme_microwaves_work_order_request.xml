@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="22" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Aggregator" max_length="40" name="aggregator" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Antenna model" mandatory="true" max_length="40" name="antenna_model" type="string">
             <choice>
+                <element label="HPX8-71W / VHLP6-7W" sequence="0" value="HPX8-71W / VHLP6-7W"/>
                 <element label="SHP3-11W" sequence="0" value="SHP3-11W"/>
                 <element label="VHLP3-11W" sequence="0" value="VHLP3-11W"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR4" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR4"/>
                 <element label="VHLP4-7W-CR4C" sequence="0" value="VHLP4-7W-CR4C"/>
                 <element label="VHLP6-7W-CR4C" sequence="0" value="VHLP6-7W-CR4C"/>
                 <element label="VHLPX2-71W" sequence="0" value="VHLPX2-71W"/>
@@ -17,25 +20,65 @@
         <element attributes="edge_encryption_enabled=true" label="Band" mandatory="true" max_length="40" name="band" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Bandwidth" mandatory="true" max_length="40" name="bandwidth" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Capacity" mandatory="true" max_length="40" name="capacity" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Change" mandatory="true" max_length="40" name="change" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Change on field" mandatory="true" max_length="40" name="change" type="string">
             <choice>
                 <element label="HW" sequence="10" value="HW"/>
                 <element label="SW" sequence="20" value="SW"/>
                 <element label="No change" sequence="30" value="No change"/>
             </choice>
         </element>
+        <element label="Change on CNI" max_length="250" name="change_cni" type="string_full_utf8"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Close code" max_length="40" name="close_code" type="string">
             <choice>
                 <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>
                 <element label="Work completed with issues" sequence="1" value="Work completed with issues"/>
             </choice>
         </element>
+        <element choice="1" label="Configuration" max_length="40" name="configuration" type="choice">
+            <choice>
+                <element label="FD" value="FD"/>
+                <element label="HSB" value="HSB"/>
+                <element label="MIMO" value="MIMO"/>
+                <element label="SD" value="SD"/>
+                <element label="XPIC" value="XPIC"/>
+                <element label="XPIC SD" value="XPIC SD"/>
+            </choice>
+        </element>
         <element label="Design change" max_length="40" name="design_change" read_only="true" type="boolean"/>
         <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Mlink URL" mandatory="true" max_length="1024" name="input_document_url_2" type="url"/>
-        <element label="Deliverable URL" max_length="1024" name="input_document_url_3" type="url"/>
+        <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Deliverable URL" mandatory="true" max_length="1024" name="input_document_url_3" type="url"/>
         <element attributes="edge_encryption_enabled=true" label="Modulation" mandatory="true" max_length="40" name="modulation" type="string"/>
         <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
         <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
+        <element label="Port requested" max_length="40" name="port_requested" type="boolean"/>
+        <element choice="1" label="Protection" max_length="40" name="protection" type="choice">
+            <choice>
+                <element label="1+0" value="1+0"/>
+                <element label="1+1" value="1+1"/>
+                <element label="2+0" value="2+0"/>
+                <element label="2+1" value="2+1"/>
+                <element label="2+2" value="2+2"/>
+                <element label="3+0" value="3+0"/>
+                <element label="3+1" value="3+1"/>
+                <element label="4+0" value="4+0"/>
+                <element label="4+1" value="4+1"/>
+                <element label="4+4" value="4+4"/>
+                <element label="4x4" value="4x4"/>
+                <element label="5+0" value="5+0"/>
+                <element label="5+1" value="5+1"/>
+                <element label="6+0" value="6+0"/>
+                <element label="6+1" value="6+1"/>
+                <element label="7+0" value="7+0"/>
+                <element label="7+1" value="7+1"/>
+                <element label="8+1" value="8+1"/>
+                <element label="9+1" value="9+1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Radio model" max_length="40" name="radio_model" type="string">
+            <choice>
+                <element label="IP20C" sequence="0" value="IP20C"/>
+            </choice>
+        </element>
         <element label="Reception level (dBm)" mandatory="true" max_length="40" name="reception_level" type="float"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Technology" mandatory="true" max_length="40" name="technology" type="string">
             <choice>

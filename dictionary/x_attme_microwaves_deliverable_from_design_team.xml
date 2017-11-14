@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="sys_import_set_row" label="deliverable from design team" max_length="40" name="x_attme_microwaves_deliverable_from_design_team" type="collection">
+        <element attributes="import_attribute_name=Agregador,edge_encryption_enabled=true" label="Agregador" max_length="40" name="u_agregador" type="string"/>
+        <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda,edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda" max_length="40" name="u_ancho__de__banda" type="string"/>
+        <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda (X),edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda (X)" max_length="40" name="u_ancho__de__banda__x_" type="string"/>
+        <element attributes="import_attribute_name=Antena,edge_encryption_enabled=true" label="Antena" max_length="40" name="u_antena" type="string"/>
+        <element attributes="import_attribute_name=Antena (S),edge_encryption_enabled=true" label="Antena (S)" max_length="40" name="u_antena__s_" type="string"/>
+        <element attributes="import_attribute_name=Banda,edge_encryption_enabled=true" label="Banda" max_length="40" name="u_banda" type="string"/>
+        <element attributes="import_attribute_name=Banda (V),edge_encryption_enabled=true" label="Banda (V)" max_length="40" name="u_banda__v_" type="string"/>
+        <element attributes="import_attribute_name=Cambio en campo,edge_encryption_enabled=true" label="Cambio en campo" max_length="40" name="u_cambio_en_campo" type="string"/>
+        <element attributes="import_attribute_name=Cambio Para CNI,edge_encryption_enabled=true" label="Cambio Para CNI" max_length="40" name="u_cambio_para_cni" type="string"/>
+        <element attributes="import_attribute_name=Capacidad" label="Capacidad" max_length="40" name="u_capacidad" type="integer"/>
+        <element attributes="import_attribute_name=Capacidad (Y),edge_encryption_enabled=true" label="Capacidad (Y)" max_length="40" name="u_capacidad__y_" type="string"/>
+        <element attributes="import_attribute_name=COMENTARIOS,edge_encryption_enabled=true" label="COMENTARIOS" max_length="40" name="u_comentarios" type="string"/>
+        <element attributes="import_attribute_name=Configuración,edge_encryption_enabled=true" label="Configuración" max_length="40" name="u_configuración" type="string"/>
+        <element attributes="import_attribute_name=Enlace,edge_encryption_enabled=true" label="Enlace" max_length="40" name="u_enlace" type="string"/>
+        <element attributes="import_attribute_name=Equipo,edge_encryption_enabled=true" label="Equipo" max_length="40" name="u_equipo" type="string"/>
+        <element attributes="import_attribute_name=Equipo (Q),edge_encryption_enabled=true" label="Equipo (Q)" max_length="40" name="u_equipo__q_" type="string"/>
+        <element attributes="import_attribute_name=Modelo de Equipo,edge_encryption_enabled=true" label="Modelo de Equipo" max_length="40" name="u_modelo_de_equipo" type="string"/>
+        <element attributes="import_attribute_name=Modelo de Equipo (R),edge_encryption_enabled=true" label="Modelo de Equipo (R)" max_length="40" name="u_modelo_de_equipo__r_" type="string"/>
+        <element attributes="import_attribute_name=Modulacion,edge_encryption_enabled=true" label="Modulacion" max_length="40" name="u_modulacion" type="string"/>
+        <element attributes="import_attribute_name=Modulacion (W),edge_encryption_enabled=true" label="Modulacion (W)" max_length="40" name="u_modulacion__w_" type="string"/>
+        <element attributes="import_attribute_name=Nivel &#10;Recepcion&#10;(dBm)" label="Nivel &#10;Recepcion&#10;(dBm)" max_length="15" name="u_nivel__recepcion__dbm_" type="decimal"/>
+        <element attributes="import_attribute_name=Nivel &#10;Recepcion&#10;(dBm) (AA)" label="Nivel &#10;Recepcion&#10;(dBm) (AA)" max_length="15" name="u_nivel__recepcion__dbm___aa_" type="decimal"/>
+        <element attributes="import_attribute_name=Potencia&#10;(dBm)" label="Potencia&#10;(dBm)" max_length="40" name="u_potencia__dbm_" type="integer"/>
+        <element attributes="import_attribute_name=Potencia&#10;(dBm) (Z)" label="Potencia&#10;(dBm) (Z)" max_length="40" name="u_potencia__dbm___z_" type="integer"/>
+        <element attributes="import_attribute_name=Protección,edge_encryption_enabled=true" label="Protección" max_length="40" name="u_protección" type="string"/>
+        <element attributes="import_attribute_name=Se requiere puerto (SI o NO),edge_encryption_enabled=true" label="Se requiere puerto (SI o NO)" max_length="40" name="u_se_requiere_puerto__si_o_no_" type="string"/>
+        <element attributes="import_attribute_name=Site 1 Name,edge_encryption_enabled=true" label="Site 1 Name" max_length="40" name="u_site_1_name" type="string"/>
+        <element attributes="import_attribute_name=Site 2 Name,edge_encryption_enabled=true" label="Site 2 Name" max_length="40" name="u_site_2_name" type="string"/>
+        <element attributes="import_attribute_name=TX Freq&#10; (MHz)" label="TX Freq&#10; (MHz)" max_length="15" name="u_tx_freq___mhz0" type="decimal"/>
+        <element attributes="import_attribute_name= TX Freq&#10; (MHz)" label=" TX Freq&#10; (MHz)" max_length="15" name="u_tx_freq___mhz_" type="decimal"/>
+        <element attributes="import_attribute_name= TX Freq&#10; (MHz) (T)" label=" TX Freq&#10; (MHz) (T)" max_length="15" name="u_tx_freq___mhz___t_" type="decimal"/>
+        <element attributes="import_attribute_name=TX Freq&#10; (MHz) (U)" label="TX Freq&#10; (MHz) (U)" max_length="15" name="u_tx_freq___mhz___u_" type="decimal"/>
+    </element>
+</database>
