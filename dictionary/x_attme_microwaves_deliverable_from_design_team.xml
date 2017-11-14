@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="sys_import_set_row" label="deliverable from design team" max_length="40" name="x_attme_microwaves_deliverable_from_design_team" type="collection">
+    <element extends="sys_import_set_row" label="MW deliverable from design team" max_length="40" name="x_attme_microwaves_deliverable_from_design_team" type="collection">
         <element attributes="import_attribute_name=Agregador,edge_encryption_enabled=true" label="Agregador" max_length="40" name="u_agregador" type="string"/>
         <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda,edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda" max_length="40" name="u_ancho__de__banda" type="string"/>
         <element attributes="import_attribute_name=Ancho &#10;de&#10; Banda (X),edge_encryption_enabled=true" label="Ancho &#10;de&#10; Banda (X)" max_length="40" name="u_ancho__de__banda__x_" type="string"/>
