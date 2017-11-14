@@ -6,7 +6,7 @@
         <coalesce_case_sensitive>false</coalesce_case_sensitive>
         <coalesce_empty_fields>false</coalesce_empty_fields>
         <date_format>yyyy-MM-dd HH:mm:ss</date_format>
-        <map display_value="MW WOR and subtasks import 2">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
+        <map display_value="MW WOR and subtasks import">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
         <reference_value_field/>
         <source_field>u_ancho__de__banda__x_</source_field>
         <source_script><![CDATA[answer = (function transformEntry(source) {

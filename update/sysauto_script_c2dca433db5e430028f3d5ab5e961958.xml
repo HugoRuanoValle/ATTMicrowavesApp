@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>MW search Datacom requests related to NMS requests</name>
+        <run_as display_value="Hugo Ernesto Ruano Valle">59f351e6db53b60028f3d5ab5e961947</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-11-14 17:28:15</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[ /*
+El presente job corre a diario y busca una datacom request relacionada con una solicitud NMS, unicamente se consideran las solicitudes de NMS que se encuentren activas, querequieran puerto y  no tengan una DCR relacionada. Una solicitud de datacom se definirá como "factible para relacionar" si cumple con los siguientes requisitos:
+
+-La DCR debe de encontrarse activa
+-La DCR debe de pertenecer al departamento de Microondas
+-LA DCR debe de tener una asignación de puerto con el mismo agregador que la solicitud NMS
+ */
+
+searchDCRrelatedtoNMSrequest();
+
+function searchDCRrelatedtoNMSrequest()
+{
+	var proposed_datacom_request_sysid;
+	
+	var nms_request = new GlideRecord('x_attme_microwaves_nms_requests');
+	nms_request.addActiveQuery(); //solo activas
+	nms_request.addQuery('port_requested', true); //solo con solicitud de puerto
+	nms_request.addNullQuery('port_datacom_request'); //sin DCR relacionado
+	nms_request.query();
+	
+	while(nms_request.next())
+	{
+		var datacom_port_assignment = new GlideRecord('x_attme_datacom_port_assignment');
+		datacom_port_assignment.addQuery('location', nms_request.aggregator); //mismo agregador
+		datacom_port_assignment.orderByDesc('sys_created_on'); //evaluamos desde la más reciente
+		datacom_port_assignment.query();
+		
+		//buscamos el sys_id del departamento del usuario (todos los solicitantes de NMS son del area de microondas ya que estas son solicitudes internas)
+		
+		var user = new GlideRecord('sys_user');
+		user.get(nms_request.requested_for);
+		var microwaves_department = user.department;
+		
+		//posiblemente encontremos varios "port assignment" para el mismo agregador, se evaluan todas las DCR relacionadas con esos port assignment
+		while(datacom_port_assignment.next())
+		{
+			//evalumamos la solicitud de datacom relacionada con el port assignment
+			var datacom_request = new GlideRecord('x_attme_datacom_datacom_request');
+			datacom_request.addQuery('sys_id', datacom_port_assignment.datacom_request);
+			datacom_request.query();
+			
+			if(datacom_request.next())
+				{
+				//si la solicitud de datacom se encuentra activa
+				if(datacom_request.active == true)
+				{
+					//si la solicitud además es de un usuario del departamento de microondas
+					if(datacom_request.opened_by.department == microwaves_department)
+					{
+						//guardamos el sys_id de la datacom request encontrada
+						 proposed_datacom_request_sysid = datacom_request.sys_id;
+					}
+				}
+			}
+			
+			if(proposed_datacom_request_sysid != '')
+			{
+				//brincamos el ciclo while
+				break;
+			}
+			
+		}
+		
+	    //actualizamos el registro de NMS request
+		nms_request.port_datacom_request = proposed_datacom_request_sysid;
+		nms_request.update();
+		
+	}
+	
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-14 17:28:50</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c2dca433db5e430028f3d5ab5e961958</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>MW search Datacom requests related to NMS requests</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysauto_script_c2dca433db5e430028f3d5ab5e961958</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-14 17:56:03</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

@@ -2,7 +2,7 @@
 <record_update table="sys_transform_script">
     <sys_transform_script action="INSERT_OR_UPDATE">
         <active>true</active>
-        <map display_value="MW WOR and subtasks import 2">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
+        <map display_value="MW WOR and subtasks import">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
         <order>100</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 	

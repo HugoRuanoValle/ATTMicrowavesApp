@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="task" label="Microwaves request" max_length="40" name="x_attme_microwaves_microwaves_request" sizeclass="1" text_index="true" type="collection">
+        <element label="Assigned by" max_length="32" name="assigned_by" read_only="true" reference="sys_user" type="reference"/>
         <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Input document URL" mandatory="true" max_length="1024" name="input_document_url" type="url"/>
         <element default="true" label="Manual assigment treatment" max_length="40" name="manual_assignment_treatment" read_only="true" type="boolean"/>
         <element choice="1" label="On hold reason" max_length="40" name="on_hold_reason" type="choice">

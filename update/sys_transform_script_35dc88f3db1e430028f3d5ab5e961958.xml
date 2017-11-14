@@ -2,7 +2,7 @@
 <record_update table="sys_transform_script">
     <sys_transform_script action="INSERT_OR_UPDATE">
         <active>true</active>
-        <map display_value="MW WOR and subtasks import 2">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
+        <map display_value="MW WOR and subtasks import">4fd5b86bdb1a430028f3d5ab5e9619f1</map>
         <order>200</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
 	
@@ -104,14 +104,22 @@ function createNMSRequest(work_order_request)
 	nms.point_b = work_order_request.point_b;
 	nms.requested_for = work_order_request.requested_for;
 	nms.project = work_order_request.project;
-	nms.aggregator = work_order_request.aggregator;
+	nms.port_requested = work_order_request.port_requested;
+	nms.aggregator_site_id = work_order_request.aggregator;
+	nms.aggregator = searchAggregator(work_order_request.aggregator); //con una función
+	
+	//si se requiere puerto se busca la solicitud de puerto en datacom
+	if(nms.port_requested == true)
+	{
+	    nms.port_datacom_request = searchDCR(nms.aggregator, nms.requested_for); //con una función
+	}
+	
 	nms.technology = work_order_request.technology;
 	nms.radio_model = work_order_request.radio_model;
 	nms.protection = work_order_request.protection;
 	nms.configuration = work_order_request.configuration;
 	nms.input_document_url = work_order_request.input_document_url; //url del archivo LLD
 	nms.input_document_url_2 = work_order_request.input_document_url_3; //url del archivo entregable
-	nms.port_requested = work_order_request.port_requested;
 	nms.observations = work_order_request.wor_comments;
 	nms.parent = work_order_request.sys_id;
 	nms.work_order_request = work_order_request.sys_id;
@@ -140,13 +148,74 @@ function createDocumentationRequest(work_order_request)
 	doc.work_order_request = work_order_request.sys_id;
 	doc.insert();
 }
+
+
+//a continuación se presenta las funciones auxiliares de la función createNMSRequest()
+
+function searchAggregator(work_order_request_aggregator)
+{
+	//Se busca el aggregador en el "catalogo" de agregadores, estas son localidades con el campo "datacom location" como true.
+	
+	var aggregator = new GlideRecord('cmn_location');
+	aggregator.addQuery('u_datacom_location', true);
+	aggregator.addQuery('u_site_id', work_order_request_aggregator);
+	aggregator.query();
+	
+	if(aggregator.next())
+	{
+		return aggregator.sys_id; //devuelve el sys_id del agregador encontrado
+	}
+	
+	
+}
+
+
+function searchDCR(nms_aggregator, nms_requested_for)
+{
+	var datacom_port_assignment = new GlideRecord('x_attme_datacom_port_assignment');
+	datacom_port_assignment.addQuery('location', nms_aggregator);
+	datacom_port_assignment.orderByDesc('sys_created_on'); //evaluamos de la más reciente 
+	datacom_port_assignment.query();
+		
+		//buscamos el sys_id del departamento del usuario
+		var user = new GlideRecord('sys_user');
+		user.get(nms_requested_for);
+		var microwaves_department = user.department;		
+		
+		//posiblemente encontremos varios "port assignment" para el mismo agregador, se evaluan todas
+		while(datacom_port_assignment.next())
+		{
+			//evalumamos la solicitud de datacom relacionada con el port assignment
+			var datacom_request = new GlideRecord('x_attme_datacom_datacom_request');
+			datacom_request.addQuery('sys_id', datacom_port_assignment.datacom_request);
+			datacom_request.query();
+			
+			if(datacom_request.next())
+			{
+				//si la solicitud de datacom se encuentra activa
+				if(datacom_request.active == true)
+				{
+					//si la solicitud además es de un usuario del departamento de microondas
+					if(datacom_request.opened_by.department == microwaves_department)
+					{
+						//retornamos el sys_id de la datacom request encontrada
+						return datacom_request.sys_id;
+					}
+				}
+			}
+			
+			
+			
+        }
+
+}
 ]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>hugo.ruano</sys_created_by>
         <sys_created_on>2017-11-14 15:08:40</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>35dc88f3db1e430028f3d5ab5e961958</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
         <sys_policy/>
@@ -154,7 +223,7 @@ function createDocumentationRequest(work_order_request)
         <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
         <sys_update_name>sys_transform_script_35dc88f3db1e430028f3d5ab5e961958</sys_update_name>
         <sys_updated_by>hugo.ruano</sys_updated_by>
-        <sys_updated_on>2017-11-14 16:15:32</sys_updated_on>
+        <sys_updated_on>2017-11-14 17:44:09</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>
