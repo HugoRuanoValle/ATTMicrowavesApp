@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <collection>x_attme_microwaves_scni_request</collection>
+        <condition table="x_attme_microwaves_scni_request">sys_class_name=x_attme_microwaves_scni_request^EQ<item endquery="false" field="sys_class_name" goto="false" newquery="false" operator="=" or="false" value="x_attme_microwaves_scni_request"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>multipart/mixed</content_type>
+        <description>La presente notificación sirve para alertar a los usuarios asignados a las otras tareas relacionadas con una work order request para la cual se presento un issue en su solicitud CNI relacionada.</description>
+        <event_name>x_attme_microwaves.close_with_issues_warning</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <importance>high</importance>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p><span style="font-family: verdana, geneva;"><font face="verdana, geneva">Buen d&iacute;a</font></span></p>
+<p><span style="font-family: verdana, geneva;">Se le notifica que la solicitud SCNI con el n&uacute;mero <em>${number}</em> para el enlace <em>${point_a}/${point_b}</em> ha sido <strong>completada con un issue</strong>. La solicitud presenta los siguientes comentarios de cierre:</span></p>
+<p><span style="font-family: verdana, geneva;">&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><strong><em>"${close_notes}"</em></strong></span></p>
+<p><span style="font-family: verdana, geneva;">&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva;"><strong>Debido al issue las tareas relacionadas con la solicitud ${work_order_request.number}han sido cerradas.</strong> Para mayor detalle favor de ponerse en contacto con<em> ${assigned_to}</em>. Puede ver mayor detalle de la solicitud CNI dando click en el siguiente link ${URI}.</span></p>
+<p><span style="font-family: verdana, geneva;">Saludos</span></p>
+<p><span style="font-family: verdana, geneva;">${mail_script:MW close with issues warning}</span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>CNI closed with issues warning</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>requested_for</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Issue relacionado con solicitud de orden de trabajo ${work_order_request.number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-14 19:43:40</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0ccb8d3fdb5e430028f3d5ab5e961981</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>CNI closed with issues warning</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysevent_email_action_0ccb8d3fdb5e430028f3d5ab5e961981</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-14 23:34:03</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

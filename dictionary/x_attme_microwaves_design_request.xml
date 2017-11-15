@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Design request" max_length="40" name="x_attme_microwaves_design_request" sizeclass="20" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Design request" max_length="40" name="x_attme_microwaves_design_request" sizeclass="3" type="collection">
         <element choice="1" label="Change" mandatory="true" max_length="40" name="change" type="choice">
             <choice>
                 <element label="HW" sequence="0" value="HW"/>

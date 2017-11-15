@@ -15,7 +15,7 @@
         <mobile_title>Validation caravan requests</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_attme_microwaves_candidate_validation_request</name>
-        <order>1200</order>
+        <order>1000</order>
         <override_menu_roles>false</override_menu_roles>
         <query>/com.glideapp.servicecatalog_cat_item_view.do?sysparm_id=3ba560c1db06434028f3d5ab5e961972</query>
         <report/>
@@ -29,7 +29,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e8f8e805db06434028f3d5ab5e96198e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Update WORs from attach</sys_name>
         <sys_overrides/>
         <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
         <sys_update_name>sys_app_module_e8f8e805db06434028f3d5ab5e96198e</sys_update_name>
         <sys_updated_by>hugo.ruano</sys_updated_by>
-        <sys_updated_on>2017-10-24 22:51:43</sys_updated_on>
+        <sys_updated_on>2017-11-14 18:40:15</sys_updated_on>
         <timeline_page/>
         <title>Update WORs from attach</title>
         <uncancelable>false</uncancelable>

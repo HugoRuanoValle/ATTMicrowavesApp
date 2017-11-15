@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Documentation request" max_length="40" name="x_attme_microwaves_documentation_request" sizeclass="20" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Documentation request" max_length="40" name="x_attme_microwaves_documentation_request" sizeclass="3" type="collection">
         <element choice="1" label="Close code" max_length="40" name="close_code" type="choice">
             <choice>
                 <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>

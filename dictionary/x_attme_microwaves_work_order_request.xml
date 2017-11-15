@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="22" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="3" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Aggregator" max_length="40" name="aggregator" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Antenna model" mandatory="true" max_length="40" name="antenna_model" type="string">
             <choice>

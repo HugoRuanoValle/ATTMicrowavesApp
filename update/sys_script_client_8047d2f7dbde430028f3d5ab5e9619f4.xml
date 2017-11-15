@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>El presente client script es ocupado para pasar la información del campo comments al campo "reject_reason". El campo reject reason es ocupado luego para enviar su contenido en una notificación. Inicialmente dicho campo se creo para el proceso de aceptación / rechazo de solicitudes sin embargo se ocupa para guarda el detalle/comentarios del estado on hold.</description>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>CNI pass on hold comments</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	
+	var cni_table = 'x_attme_microwaves_scni_request';
+	var cni_record_sysid = g_form.getUniqueValue();
+	var comments = g_form.getValue('comments');
+	
+	//si no hay nada en los comentarios se da un return
+	if(comments == '')
+	{
+		return;
+	}
+	
+	//en caso de que si existan comentarios
+	else
+	{
+		var ga = new GlideAjax('passStringtoRejectReason');
+		ga.addParam('sysparm_name','passInformation');
+		ga.addParam('sysparm_table', cni_table);
+		ga.addParam('sysparm_sysid', cni_record_sysid);
+		ga.addParam('sysparm_string', comments);
+		ga.getXML(AjaxResponse);
+		
+	}
+	
+}
+
+//callback function dummy
+function AjaxResponse(response) {
+		
+	 //dummy
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-15 01:13:09</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8047d2f7dbde430028f3d5ab5e9619f4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>CNI pass on hold comments</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_client_8047d2f7dbde430028f3d5ab5e9619f4</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-15 01:15:16</sys_updated_on>
+        <table>x_attme_microwaves_scni_request</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

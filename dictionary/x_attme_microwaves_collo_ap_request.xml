@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Collo ap request" max_length="40" name="x_attme_microwaves_collo_ap_request" sizeclass="41" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Collo ap request" max_length="40" name="x_attme_microwaves_collo_ap_request" sizeclass="76" type="collection">
         <element label="Activity A" mandatory="true" max_length="200" name="activity_a" type="string"/>
         <element label="Activity B" mandatory="true" max_length="200" name="activity_b" type="string"/>
         <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>

@@ -6,38 +6,57 @@
             <element>on_hold_reason</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Awaiting user</label>
+            <label>NMS reason 1</label>
             <language>en</language>
             <name>x_attme_microwaves_nms_requests</name>
-            <sequence>0</sequence>
+            <sequence/>
             <sys_created_by>hugo.ruano</sys_created_by>
             <sys_created_on>2017-09-15 16:31:33</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d270e7d4db15c300e7bbdbbb5e96194c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>hugo.ruano</sys_updated_by>
-            <sys_updated_on>2017-09-15 16:31:33</sys_updated_on>
-            <value>Awaiting user</value>
+            <sys_updated_on>2017-11-14 23:47:27</sys_updated_on>
+            <value>NMS reason 1</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>on_hold_reason</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Awaiting internal supplier</label>
+            <label>NMS reason 2</label>
             <language>en</language>
             <name>x_attme_microwaves_nms_requests</name>
-            <sequence>1</sequence>
+            <sequence/>
             <sys_created_by>hugo.ruano</sys_created_by>
             <sys_created_on>2017-09-15 16:31:44</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>4d80e7d4db15c300e7bbdbbb5e961972</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>hugo.ruano</sys_updated_by>
-            <sys_updated_on>2017-09-15 16:31:44</sys_updated_on>
-            <value>Awaiting internal supplier</value>
+            <sys_updated_on>2017-11-14 23:47:25</sys_updated_on>
+            <value>NMS reason 2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>on_hold_reason</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>NMS reason 3</label>
+            <language>en</language>
+            <name>x_attme_microwaves_nms_requests</name>
+            <sequence/>
+            <sys_created_by>hugo.ruano</sys_created_by>
+            <sys_created_on>2017-11-14 23:47:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d834e73dbde430028f3d5ab5e961942</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-11-14 23:48:20</sys_updated_on>
+            <value>NMS reason 3</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>on_hold_reason</element>
@@ -47,15 +66,15 @@
             <sys_created_on>2017-09-15 16:31:33</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>de70e7d4db15c300e7bbdbbb5e96194c</sys_id>
-            <sys_mod_count>3</sys_mod_count>
+            <sys_mod_count>10</sys_mod_count>
             <sys_name>on_hold_reason</sys_name>
             <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
             <sys_update_name>sys_choice_x_attme_microwaves_nms_requests_on_hold_reason</sys_update_name>
-            <sys_updated_by>angel.pineda</sys_updated_by>
-            <sys_updated_on>2017-10-10 00:00:34</sys_updated_on>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-11-14 23:48:20</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>
