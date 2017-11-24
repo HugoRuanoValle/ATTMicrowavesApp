@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Microwaves - Check CNI Requests Aging</name>
+        <run_as display_value="Hugo Ernesto Ruano Valle">59f351e6db53b60028f3d5ab5e961947</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-11-24 19:55:41</run_start>
+        <run_time>1970-01-01 06:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[checkCNIRequestAging();
+
+function checkCNIRequestAging()
+{
+	//guardamos la fecha actual en un objeto GlideDate
+	var today = new GlideDate();
+		
+	//buscamos todas las solicitudes CNI con estado "delivered
+	var cni = new GlideRecord('x_attme_microwaves_scni_request');
+	cni.addQuery('state', 6); 
+	cni.query();
+	
+	while(cni.next())
+	{		
+		var cni_requested_to_carrier_date = cni.cni_requested_to_carrier_date;
+		var cni_requested_to_carrier_date_glide = new GlideDate();
+		cni_requested_to_carrier_date_glide.setValue(cni_requested_to_carrier_date); 
+		
+		//obtenemos la diferencia entre la fecha actual y la fecha se solicitud de CNI con carrier
+		var duration= GlideDate.subtract(cni_requested_to_carrier_date_glide, today);
+		duration = duration.toString();
+		
+		//la diferencia la obtenemos en formato Unix Timestamp, procedemos a hacerle splits para obtener el número de días
+		var duration_split_1 = duration.split(' ');
+		var duration_date = duration_split_1[0];
+				
+		var duration_split_2 = duration_date.split('-');
+		var duration_days = duration_split_2[2];  //número de días de diferencia
+		
+		//convertimos el string en un integer
+		duration_days = parseInt(duration_days);
+		
+				
+		//Si la duración es igual a 16 días entonces notificamos al usuario "assigned to"
+		if(duration_days == 16)
+		{
+		    cni.work_notes = 'Solicitud CNI con más 15 dias se envía recordatorio al usuario asignado para revisión de la solicitud con carrier.';
+			cni.update();
+			
+			//disparamos el siguiente evento para emitir una notificación
+		    gs.eventQueue("x_attme_microwaves.cni_request_delivered_+15_days", cni, gs.getUserID(), gs.getUserName());
+			
+		}
+		
+		
+		//Si la duración es mayor a 31 días entonces la solicitud es cerrada de manera automática.
+		if(duration_days >= 31)
+		{
+			
+			cni.work_notes = 'Solicitud CNI con más 30 dias en estado "delivered", la solicitud se cierra de manera automática.';
+			cni.state = 7; // estado closed 
+			
+			if(cni.close_notes.nil())
+			{
+				cni.close_notes = 'Solicitud CNI con más 30 dias en estado "delivered", la solicitud se cierra de manera automática';
+			}
+			
+			cni.update();
+			
+			//disparamos el siguiente evento para emitir una notificación
+		    gs.eventQueue("x_attme_microwaves.cni_request_delivered_+30_days", cni, gs.getUserID(), gs.getUserName());
+			
+		}
+		
+	}
+	
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-24 20:04:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4b7ee88fdb22cb00e7bbdbbb5e96196c</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Microwaves - Check CNI Requests Aging</sys_name>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sysauto_script_4b7ee88fdb22cb00e7bbdbbb5e96196c</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-24 23:21:33</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
