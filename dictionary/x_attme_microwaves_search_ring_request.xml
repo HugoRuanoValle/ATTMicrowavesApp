@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Search ring request" max_length="40" name="x_attme_microwaves_search_ring_request" sizeclass="5" text_index="true" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Search ring request" max_length="40" name="x_attme_microwaves_search_ring_request" sizeclass="6" text_index="true" type="collection">
         <element label="All sites feasible" max_length="40" name="all_sites_feasible" type="boolean"/>
         <element choice="1" label="Solution type" max_length="40" name="solution_type" type="choice">
             <choice>

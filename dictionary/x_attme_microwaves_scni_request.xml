@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="CNI request" max_length="40" name="x_attme_microwaves_scni_request" sizeclass="2" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="CNI request" max_length="40" name="x_attme_microwaves_scni_request" sizeclass="29" type="collection">
         <element choice="1" label="Close code" max_length="40" name="close_code" type="choice">
             <choice>
                 <element label="Work completed with no issues" sequence="0" value="Work completed with no issues"/>

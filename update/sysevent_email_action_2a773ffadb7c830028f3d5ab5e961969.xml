@@ -26,7 +26,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p><span style="font-family: verdana, geneva;">Estimado(a) ${requested_for}</span></p>
-<p><span style="font-family: verdana, geneva;">Se le informa que se ha abierto el plan de validaci&oacute;n de candidatos<em>&nbsp;${number} - ${plan_name}</em>&nbsp;en su nombre, se revisara la informaci&oacute;n proporcionada por parte del grupo asignado. Puede dar seguimiento a su plan accediendo a la siguiente liga: ${URI}</span></p>
+<p><span style="font-family: verdana, geneva;">Se le informa que el plan de validaci&oacute;n de candidatos<em>&nbsp;${number} - ${plan_name}</em>&nbsp;en su nombre, se revisara la informaci&oacute;n proporcionada por parte del grupo asignado. Puede dar seguimiento a su plan accediendo a la siguiente liga: ${URI}</span></p>
 <p><span style="font-family: verdana, geneva;">Saludos</span></p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -50,7 +50,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2a773ffadb7c830028f3d5ab5e961969</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>CVP open on your behalf</sys_name>
         <sys_overrides/>
         <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
@@ -59,7 +59,7 @@
         <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
         <sys_update_name>sysevent_email_action_2a773ffadb7c830028f3d5ab5e961969</sys_update_name>
         <sys_updated_by>hugo.ruano</sys_updated_by>
-        <sys_updated_on>2017-08-29 18:54:17</sys_updated_on>
+        <sys_updated_on>2017-11-15 16:37:57</sys_updated_on>
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>

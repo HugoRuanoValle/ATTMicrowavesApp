@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="3" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Work order request" max_length="40" name="x_attme_microwaves_work_order_request" sizeclass="43" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Aggregator" max_length="40" name="aggregator" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Antenna model" mandatory="true" max_length="40" name="antenna_model" type="string">
             <choice>
                 <element label="HPX8-71W / VHLP6-7W" sequence="0" value="HPX8-71W / VHLP6-7W"/>
                 <element label="SHP3-11W" sequence="0" value="SHP3-11W"/>
                 <element label="VHLP3-11W" sequence="0" value="VHLP3-11W"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR10" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR10"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR11" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR11"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR12" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR12"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR13" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR13"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR14" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR14"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR15" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR15"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR16" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR16"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR17" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR17"/>
                 <element label="VHLP4-7W-CR4 / VHLP4-7W-CR4" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR4"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR5" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR5"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR6" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR6"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR7" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR7"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR8" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR8"/>
+                <element label="VHLP4-7W-CR4 / VHLP4-7W-CR9" sequence="0" value="VHLP4-7W-CR4 / VHLP4-7W-CR9"/>
                 <element label="VHLP4-7W-CR4C" sequence="0" value="VHLP4-7W-CR4C"/>
                 <element label="VHLP6-7W-CR4C" sequence="0" value="VHLP6-7W-CR4C"/>
                 <element label="VHLPX2-71W" sequence="0" value="VHLPX2-71W"/>
@@ -72,6 +85,18 @@
                 <element label="7+1" value="7+1"/>
                 <element label="8+1" value="8+1"/>
                 <element label="9+1" value="9+1"/>
+                <element label="4 10" sequence="0" value="4+10"/>
+                <element label="4 11" sequence="0" value="4+11"/>
+                <element label="4 12" sequence="0" value="4+12"/>
+                <element label="4 13" sequence="0" value="4+13"/>
+                <element label="4 14" sequence="0" value="4+14"/>
+                <element label="4 2" sequence="0" value="4+2"/>
+                <element label="4 3" sequence="0" value="4+3"/>
+                <element label="4 5" sequence="0" value="4+5"/>
+                <element label="4 6" sequence="0" value="4+6"/>
+                <element label="4 7" sequence="0" value="4+7"/>
+                <element label="4 8" sequence="0" value="4+8"/>
+                <element label="4 9" sequence="0" value="4+9"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Radio model" max_length="40" name="radio_model" type="string">

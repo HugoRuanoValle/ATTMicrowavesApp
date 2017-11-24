@@ -362,6 +362,234 @@
             <sys_updated_on>2017-11-14 15:47:37</sys_updated_on>
             <value>9+1</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 10</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>56c43726dbea8b00e7bbdbbb5e9619fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:07</sys_updated_on>
+            <value>4+10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 11</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a2c47726dbea8b00e7bbdbbb5e961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:08</sys_updated_on>
+            <value>4+11</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 12</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>76c47726dbea8b00e7bbdbbb5e961936</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:09</sys_updated_on>
+            <value>4+12</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 13</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8bc47726dbea8b00e7bbdbbb5e961940</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:10</sys_updated_on>
+            <value>4+13</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 14</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dfc47726dbea8b00e7bbdbbb5e96194a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:11</sys_updated_on>
+            <value>4+14</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 2</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e4c43726dbea8b00e7bbdbbb5e9619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:00</sys_updated_on>
+            <value>4+2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 3</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7cc43726dbea8b00e7bbdbbb5e9619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:01</sys_updated_on>
+            <value>4+3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 5</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d5c43726dbea8b00e7bbdbbb5e9619c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:03</sys_updated_on>
+            <value>4+5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 6</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6dc43726dbea8b00e7bbdbbb5e9619d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:03</sys_updated_on>
+            <value>4+6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 7</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f1c43726dbea8b00e7bbdbbb5e9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:04</sys_updated_on>
+            <value>4+7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 8</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ac43726dbea8b00e7bbdbbb5e9619e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:05</sys_updated_on>
+            <value>4+8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>protection</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>4 9</label>
+            <language>en</language>
+            <name>x_attme_microwaves_work_order_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2017-11-23 21:05:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cec43726dbea8b00e7bbdbbb5e9619f1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:06</sys_updated_on>
+            <value>4+9</value>
+        </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>protection</element>
             <name>x_attme_microwaves_work_order_request</name>
@@ -370,15 +598,15 @@
             <sys_created_on>2017-11-14 15:44:29</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>ce1558f7db1e430028f3d5ab5e961943</sys_id>
-            <sys_mod_count>40</sys_mod_count>
+            <sys_mod_count>52</sys_mod_count>
             <sys_name>protection</sys_name>
             <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
             <sys_update_name>sys_choice_x_attme_microwaves_work_order_request_protection</sys_update_name>
-            <sys_updated_by>hugo.ruano</sys_updated_by>
-            <sys_updated_on>2017-11-14 15:57:19</sys_updated_on>
+            <sys_updated_by>system</sys_updated_by>
+            <sys_updated_on>2017-11-23 21:05:11</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>
