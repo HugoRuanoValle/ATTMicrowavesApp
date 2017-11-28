@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_attme_microwaves_documentation_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_attme_microwaves_documentation_request">stateCHANGESTO7^close_code=Work completed with issues^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="7"/>
+            <item endquery="false" field="close_code" goto="false" newquery="false" operator="=" or="false" value="Work completed with issues"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>DOC set issue presented</name>
+        <order>90</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	//La presente business rule sirve para setear el campo "issue presented" el cual indicará que en la tarea de documentación OT se presentó un issue y este issue provocará el cierre del resto de tareas relacionadas, es importante revisar que este campo no se setee si hay otra tarea hija con el campo ya setead ya sea solicitud CNI o solicitud NMS.
+	
+	//Si en algun momento se desea incluir otro tipo de tarea se tiene que considerar no solo esta business rule sino tambien las business rule "CNI set issue presented" y "NMS set issue presented", además de agregar una business rule similar para el tipo de tarea que se está agregando.
+	
+
+	//Se revisa que no existan solicitud CNI y de NMS con el campo issue presented seteado
+	
+	var doc_related_task = new GlideRecord('x_attme_microwaves_nms_requests');
+	doc_related_task.addQuery('parent', current.work_order_request);
+	doc_related_task.addQuery('issue_presented', true);
+	doc_related_task.query();
+	
+    var cni_related_task = new GlideRecord('x_attme_microwaves_scni_request');
+	cni_related_task.addQuery('parent', current.work_order_request);
+	cni_related_task.addQuery('issue_presented', true);
+	cni_related_task.query();
+	
+	
+	//Si no existen solicitudes con el campo seteado procedemos a marcarlo en la presente solicitud, además se notifica que existirá el cierre de tareas relacionadas.
+	
+	if(doc_related_task.getRowCount() == 0 && cni_related_task.getRowCount() == 0)
+	{
+		current.issue_presented = true;
+		
+	    gs.addErrorMessage('This request was closed with issues, all request related to work order request ' + current.work_order_request.number + " will be closed. An email will be sent in order to notify this event");
+			
+	} 
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>hugo.ruano</sys_created_by>
+        <sys_created_on>2017-11-27 23:46:32</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7910c14cdbf20f00e7bbdbbb5e9619df</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>DOC set issue presented</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
+        <sys_update_name>sys_script_7910c14cdbf20f00e7bbdbbb5e9619df</sys_update_name>
+        <sys_updated_by>hugo.ruano</sys_updated_by>
+        <sys_updated_on>2017-11-28 00:31:15</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=7910c14cdbf20f00e7bbdbbb5e9619df"/>
+</record_update>

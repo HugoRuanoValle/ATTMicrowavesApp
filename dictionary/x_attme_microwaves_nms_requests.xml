@@ -22,6 +22,7 @@
         <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Port datacom solution URL" max_length="1024" name="datacom_solution_url" type="url"/>
         <element default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Topology" mandatory="true" max_length="1024" name="input_document_url_2" type="url"/>
         <element attributes="edge_encryption_enabled=true" default="&lt;Insert your Ajax URL or TSpace URL where specific files for this request can be found&gt;" label="Port request format" max_length="40" name="input_document_url_3" type="url"/>
+        <element label="Issue presented" max_length="40" name="issue_presented" read_only="true" type="boolean"/>
         <element label="Observations" max_length="5000" name="observations" type="string"/>
         <element label="Point A" mandatory="true" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
         <element label="Point B" mandatory="true" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>

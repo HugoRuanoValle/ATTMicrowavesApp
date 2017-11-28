@@ -7,6 +7,7 @@
                 <element label="Work completed with issues" sequence="1" value="Work completed with issues"/>
             </choice>
         </element>
+        <element label="Issue presented" max_length="40" name="issue_presented" read_only="true" type="boolean"/>
         <element label="Point A" max_length="32" name="point_a" reference="x_attme_microwaves_sites" type="reference"/>
         <element label="Point B" max_length="32" name="point_b" reference="x_attme_microwaves_sites" type="reference"/>
         <element label="Work order request" max_length="32" name="work_order_request" read_only="true" reference="x_attme_microwaves_work_order_request" type="reference"/>
