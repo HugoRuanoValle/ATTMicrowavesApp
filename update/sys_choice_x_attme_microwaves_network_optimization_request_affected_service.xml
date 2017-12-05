@@ -47,15 +47,15 @@
             <sys_created_on>2017-07-21 17:41:40</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>57771b9adb080f00e7bbdbbb5e9619f8</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_name>affected_service</sys_name>
             <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
             <sys_update_name>sys_choice_x_attme_microwaves_network_optimization_request_affected_service</sys_update_name>
-            <sys_updated_by>angel.pineda</sys_updated_by>
-            <sys_updated_on>2017-10-10 00:00:05</sys_updated_on>
+            <sys_updated_by>hugo.ruano</sys_updated_by>
+            <sys_updated_on>2017-12-04 20:30:39</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>
