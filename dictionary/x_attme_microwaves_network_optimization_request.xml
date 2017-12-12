@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Network optimization request" max_length="40" name="x_attme_microwaves_network_optimization_request" sizeclass="4" text_index="true" type="collection">
+    <element attributes="email_client=true" audit="true" extends="x_attme_microwaves_microwaves_request" label="Network optimization request" max_length="40" name="x_attme_microwaves_network_optimization_request" sizeclass="3" text_index="true" type="collection">
         <element label="Affected service" max_length="40" name="affected_service" type="boolean"/>
         <element choice="1" label="Bandwith" mandatory="true" max_length="40" name="bandwith" type="choice">
             <choice>
@@ -22,9 +22,9 @@
         <element attributes="edge_encryption_enabled=true" label="Capacity (Mbps)" mandatory="true" max_length="40" name="capacity" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Close code" max_length="40" name="close_code" type="string">
             <choice>
-                <element label="Cambio de trayectoria" sequence="0" value="Cambio de trayectoria"/>
-                <element label="Solución de optimización" sequence="1" value="Solución de optimización"/>
-                <element label="Solución operativa" sequence="2" value="Solución operativa"/>
+                <element label="Change in trayectory" sequence="0" value="Change in trayectory"/>
+                <element label="Operational solution" sequence="1" value="Operational solution"/>
+                <element label="Optimization solution" sequence="2" value="Optimization solution"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Configuration" mandatory="true" max_length="40" name="configuration" type="choice">

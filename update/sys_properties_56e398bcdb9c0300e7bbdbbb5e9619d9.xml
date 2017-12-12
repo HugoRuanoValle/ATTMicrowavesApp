@@ -13,7 +13,7 @@
         <sys_created_on>2017-07-28 21:51:59</sys_created_on>
         <sys_customer_update>true</sys_customer_update>
         <sys_id>56e398bcdb9c0300e7bbdbbb5e9619d9</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>59</sys_mod_count>
         <sys_name>x_attme_microwaves.SitesValidationPlanID</sys_name>
         <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
         <sys_policy/>
@@ -21,9 +21,9 @@
         <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
         <sys_update_name>sys_properties_56e398bcdb9c0300e7bbdbbb5e9619d9</sys_update_name>
         <sys_updated_by>hugo.ruano</sys_updated_by>
-        <sys_updated_on>2017-11-07 17:17:23</sys_updated_on>
+        <sys_updated_on>2017-12-12 22:44:45</sys_updated_on>
         <type>string</type>
-        <value>44072421db5e0700e7bbdbbb5e961909</value>
+        <value>4ca10238db47c30028f3d5ab5e961933</value>
         <write_roles>admin</write_roles>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=56e398bcdb9c0300e7bbdbbb5e9619d9"/>

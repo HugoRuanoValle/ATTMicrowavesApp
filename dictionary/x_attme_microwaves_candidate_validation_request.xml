@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Candidates validation request" max_length="40" name="x_attme_microwaves_candidate_validation_request" sizeclass="4" type="collection">
+    <element audit="true" extends="x_attme_microwaves_microwaves_request" label="Candidates validation request" max_length="40" name="x_attme_microwaves_candidate_validation_request" sizeclass="7" type="collection">
         <element label="Candidates validation plan" max_length="32" name="candidates_validation_plan" read_only="true" reference="x_attme_microwaves_candidate_validations_plan" type="reference"/>
         <element label="Collo Ap approval granted date" max_length="40" name="collo_ap_approval_granted_date" type="glide_date"/>
         <element label="Collo Ap approval request date " max_length="40" name="collo_ap_approval_request_date" type="glide_date"/>

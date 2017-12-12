@@ -104,7 +104,7 @@
             <sys_created_on>2017-09-11 17:24:02</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>9c260383dbcd4300e7bbdbbb5e961901</sys_id>
-            <sys_mod_count>16</sys_mod_count>
+            <sys_mod_count>17</sys_mod_count>
             <sys_name>frequency</sys_name>
             <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
             <sys_policy/>
@@ -112,7 +112,7 @@
             <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
             <sys_update_name>sys_choice_x_attme_microwaves_network_optimization_request_frequency</sys_update_name>
             <sys_updated_by>hugo.ruano</sys_updated_by>
-            <sys_updated_on>2017-12-04 20:30:53</sys_updated_on>
+            <sys_updated_on>2017-12-06 18:02:00</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>

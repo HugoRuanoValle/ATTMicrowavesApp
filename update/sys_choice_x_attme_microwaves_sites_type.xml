@@ -332,7 +332,7 @@
             <sys_created_on>2017-07-28 23:11:51</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
             <sys_id>d4362834dbdc0300e7bbdbbb5e961997</sys_id>
-            <sys_mod_count>15</sys_mod_count>
+            <sys_mod_count>16</sys_mod_count>
             <sys_name>type</sys_name>
             <sys_package display_value="Microwaves" source="x_attme_microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_package>
             <sys_policy/>
@@ -340,7 +340,7 @@
             <sys_scope display_value="Microwaves">85466334db7ff20028f3d5ab5e9619a2</sys_scope>
             <sys_update_name>sys_choice_x_attme_microwaves_sites_type</sys_update_name>
             <sys_updated_by>hugo.ruano</sys_updated_by>
-            <sys_updated_on>2017-12-04 20:31:03</sys_updated_on>
+            <sys_updated_on>2017-12-06 18:02:09</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
 </record_update>
